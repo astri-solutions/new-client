@@ -5,68 +5,68 @@
 // valores estáticos (ex.: calc, map-get).
 // =============================================================================
 
-// PRIMARY — verde
-$color-primary-light-100: #66F5A2;
-$color-primary-light-200: #4DEF93;
-$color-primary-light-300: #33E883;
-$color-primary-light-400: #1AE174;
-$color-primary-light-500: #00D865;   // default
-$color-primary-light-600: #00C75A;
-$color-primary-light-700: #00B54F;   // hover
-$color-primary-light-800: #00A344;
-$color-primary-light-900: #008F39;   // pressed
+// PRIMARY — verde São Martinho
+$color-primary-light-100: #EEF7F1;
+$color-primary-light-200: #D5ECDC;
+$color-primary-light-300: #B6DEC1;
+$color-primary-light-400: #8CCC9E;
+$color-primary-light-500: #2EA24F;   // default #2EA24F
+$color-primary-light-600: #25823F;
+$color-primary-light-700: #1E6933;   // hover
+$color-primary-light-800: #175128;
+$color-primary-light-900: #10391C;   // pressed
 
-$color-primary-dark-100: #80FFB0;
-$color-primary-dark-200: #60FF9D;
-$color-primary-dark-300: #40F68A;
-$color-primary-dark-400: #20E978;
-$color-primary-dark-500: #00D865;
-$color-primary-dark-600: #00C957;
-$color-primary-dark-700: #00B649;
-$color-primary-dark-800: #009F3B;
-$color-primary-dark-900: #00802E;
+$color-primary-dark-100: #CCF0DA;
+$color-primary-dark-200: #AADFC0;
+$color-primary-dark-300: #7DCDA5;
+$color-primary-dark-400: #50BB89;
+$color-primary-dark-500: #2EA24F;
+$color-primary-dark-600: #259042;
+$color-primary-dark-700: #1B7D35;
+$color-primary-dark-800: #126B29;
+$color-primary-dark-900: #0A581D;
 
-// SECONDARY — teal
-$color-secondary-light-100: #99C7D0;
-$color-secondary-light-200: #73AFBA;
-$color-secondary-light-300: #4D95A1;
-$color-secondary-light-400: #297986;
-$color-secondary-light-500: #0B5B68;  // default
-$color-secondary-light-600: #025562;
-$color-secondary-light-700: #004E5B;  // hover
-$color-secondary-light-800: #004551;
-$color-secondary-light-900: #003B45;  // pressed
+// SECONDARY — azul marinho São Martinho
+$color-secondary-light-100: #EEF1F4;
+$color-secondary-light-200: #D5DCE4;
+$color-secondary-light-300: #B6C2D0;
+$color-secondary-light-400: #8C9FB5;
+$color-secondary-light-500: #2E5179;  // default #2E5179
+$color-secondary-light-600: #254161;
+$color-secondary-light-700: #1E354F;  // hover
+$color-secondary-light-800: #17293D;
+$color-secondary-light-900: #101C2A;  // pressed
 
-$color-secondary-dark-100: #80B5BF;
-$color-secondary-dark-200: #60A0AC;
-$color-secondary-dark-300: #408A97;
-$color-secondary-dark-400: #247380;
-$color-secondary-dark-500: #0B5B68;
-$color-secondary-dark-600: #055460;
-$color-secondary-dark-700: #004B57;
-$color-secondary-dark-800: #00424C;
-$color-secondary-dark-900: #003740;
+$color-secondary-dark-100: #C5D5E8;
+$color-secondary-dark-200: #9BBAD5;
+$color-secondary-dark-300: #709DC2;
+$color-secondary-dark-400: #4580AF;
+$color-secondary-dark-500: #2E5179;
+$color-secondary-dark-600: #254165;
+$color-secondary-dark-700: #1C3151;
+$color-secondary-dark-800: #12213D;
+$color-secondary-dark-900: #091229;
 
-// TERTIARY — cinza quente
-$color-tertiary-light-100: #F9F9F4;
-$color-tertiary-light-200: #F6F6F0;
-$color-tertiary-light-300: #F3F3ED;
-$color-tertiary-light-400: #F0F0E9;
-$color-tertiary-light-500: #EDEDE6;  // default
-$color-tertiary-light-600: #D0D0C9;
-$color-tertiary-light-700: #B3B3AC;  // hover
-$color-tertiary-light-800: #95958F;
-$color-tertiary-light-900: #787872;  // pressed
+// TERTIARY — cinza claro São Martinho
+$color-tertiary-light-100: #FEFEFE;
+$color-tertiary-light-200: #FAFAFA;
+$color-tertiary-light-300: #F7F7F7;
+$color-tertiary-light-400: #F5F5F5;
+$color-tertiary-light-500: #F2F2F2;  // default #F2F2F2
+$color-tertiary-light-600: #C2C2C2;
+$color-tertiary-light-700: #9D9D9D;  // hover
+$color-tertiary-light-800: #797979;
+$color-tertiary-light-900: #555555;  // pressed
 
-$color-tertiary-dark-100: #F4F4EC;
-$color-tertiary-dark-200: #F3F3EA;
-$color-tertiary-dark-300: #F1F1E9;
-$color-tertiary-dark-400: #EFEFE7;
-$color-tertiary-dark-500: #EDEDE6;
-$color-tertiary-dark-600: #E0E0D7;
-$color-tertiary-dark-700: #D2D2C9;
-$color-tertiary-dark-800: #C5C4BA;
-$color-tertiary-dark-900: #B7B7AC;
+$color-tertiary-dark-100: #FEFEFE;
+$color-tertiary-dark-200: #FAFAFA;
+$color-tertiary-dark-300: #F7F7F7;
+$color-tertiary-dark-400: #F5F5F5;
+$color-tertiary-dark-500: #F2F2F2;
+$color-tertiary-dark-600: #C2C2C2;
+$color-tertiary-dark-700: #9D9D9D;
+$color-tertiary-dark-800: #797979;
+$color-tertiary-dark-900: #555555;
 
 // GRAYSCALE — light (0 = branco, 950 = quase preto)
 $color-gray-light-0:   #FFFFFF;
@@ -119,8 +119,8 @@ $color-tertiary-pressed: $color-tertiary-light-900;
 $color-tertiary-subtle:  $color-tertiary-light-100;
 
 // Texto sobre cor (on-color text)
-$color-on-primary:   #000000;   // preto — contraste 10.9:1 sobre #00D865
-$color-on-secondary: #ffffff;   // branco — contraste 7.6:1 sobre #0B5B68
+$color-on-primary:   #ffffff;   // branco — contraste 6.0:1 sobre #2EA24F
+$color-on-secondary: #ffffff;   // branco — contraste 11.3:1 sobre #2E5179
 $color-on-tertiary:  $color-gray-light-900;  // escuro sobre cinza claro
 
 // Semânticas base
