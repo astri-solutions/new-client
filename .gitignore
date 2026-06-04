@@ -1,5 +1,6 @@
 node_modules/
 dist/
+.next/
 .claude/
 # But allow commands/ folder
 !commands/
