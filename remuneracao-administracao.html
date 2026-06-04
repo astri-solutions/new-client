@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sumário — Astri RI</title>
-    <meta name="description" content="Índice completo de todas as páginas do projeto Astri RI." />
+    <title>Remuneração da Administração — São Martinho RI</title>
+    <meta name="description" content="Documentos oficiais: estatuto social, políticas e regimentos internos da companhia." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/main.scss" />
@@ -31,18 +31,18 @@
         <!-- Center: Tickers -->
         <div class="topbar__tickers" aria-label="Cotação" aria-live="polite">
           <div class="topbar__ticker is-active" data-topbar-ticker>
-            <span class="topbar__ticker-symbol">ASTR4</span>
+            <span class="topbar__ticker-symbol">SMTO3</span>
             <span class="topbar__ticker-dot" aria-hidden="true">·</span>
-            <span class="topbar__ticker-price">R$ 26,27</span>
+            <span class="topbar__ticker-price">R$ --</span>
             <span class="topbar__ticker-change topbar__ticker-change--up" aria-label="Alta de 0,50%">
               <svg viewBox="0 0 10 10" width="8" height="8" fill="currentColor" aria-hidden="true"><path d="M5 2 9 8H1z"/></svg>
               0,50%
             </span>
           </div>
           <div class="topbar__ticker" data-topbar-ticker>
-            <span class="topbar__ticker-symbol">ASTR3</span>
+            <span class="topbar__ticker-symbol">SMTO3</span>
             <span class="topbar__ticker-dot" aria-hidden="true">·</span>
-            <span class="topbar__ticker-price">R$ 22,15</span>
+            <span class="topbar__ticker-price">R$ --</span>
             <span class="topbar__ticker-change topbar__ticker-change--down" aria-label="Baixa de 0,32%">
               <svg viewBox="0 0 10 10" width="8" height="8" fill="currentColor" aria-hidden="true"><path d="M5 8 9 2H1z"/></svg>
               0,32%
@@ -79,12 +79,12 @@
 
     <header class="site-header">
       <div class="site-header__inner">
-        <a href="/" class="site-header__brand" aria-label="Astri Solutions">
-          <img src="/assets/logotipo/logotipo-original.svg" alt="Astri Solutions" class="site-header__logo" />
+        <a href="/" class="site-header__brand" aria-label="São Martinho S.A.">
+          <img src="/assets/logotipo/logotipo-original.svg" alt="São Martinho S.A." class="site-header__logo" />
         </a>
         <nav class="site-header__nav" id="site-nav" data-nav aria-label="Principal">
           <div class="site-header__drawer-top">
-            <img src="/assets/logotipo/logotipo-negative.svg" alt="Astri Solutions" class="site-header__drawer-logo" />
+            <img src="/assets/logotipo/logotipo-negative.svg" alt="São Martinho S.A." class="site-header__drawer-logo" />
             <button class="site-header__drawer-close" type="button" aria-label="Fechar menu" data-nav-close>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
@@ -97,66 +97,63 @@
                 <svg class="nav-list__chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
               </button>
               <ul class="nav-dropdown">
-                <li><a class="nav-dropdown__link" href="/visao-geral.html">Visão Geral</a></li>
-                <li><a class="nav-dropdown__link" href="/nossa-historia.html">Nossa História</a></li>
-                <li><a class="nav-dropdown__link" href="/estrategias-vantagens.html">Estratégias e Vantagens Competitivas</a></li>
-                <li><a class="nav-dropdown__link" href="/portfolio.html">Portfólio</a></li>
-                <li><a class="nav-dropdown__link" href="/nosso-time.html">Nosso Time</a></li>
+                <li><a class="nav-dropdown__link" href="/visao-geral.html">Visão Institucional</a></li>
+                <li><a class="nav-dropdown__link" href="/estrategias-vantagens.html">Por que investir na São Martinho</a></li>
               </ul>
             </li>
 
             <li class="nav-list__item nav-list__item--has-sub">
               <button class="nav-list__trigger" type="button" aria-haspopup="true" aria-expanded="false" data-nav-trigger>
-                Governança
+                Governança Corporativa
                 <svg class="nav-list__chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
               </button>
               <ul class="nav-dropdown">
+                <li><a class="nav-dropdown__link" href="/novo-mercado.html">Novo Mercado</a></li>
                 <li><a class="nav-dropdown__link" href="/composicao-acionaria.html">Composição Acionária</a></li>
-                <li><a class="nav-dropdown__link" href="/diretoria-conselho.html">Diretoria e Conselho</a></li>
-                <li><a class="nav-dropdown__link" href="/estatuto-politicas.html">Estatuto, Políticas e Regimentos</a></li>
-                <li><a class="nav-dropdown__link" href="/atas-assembleias.html">Atas de Assembleias</a></li>
-                <li><a class="nav-dropdown__link" href="/codigo-conduta.html">Código de Conduta e Ética</a></li>
-                <li><a class="nav-dropdown__link" href="/sustentabilidade.html">Sustentabilidade Corporativa</a></li>
+                <li><a class="nav-dropdown__link" href="/diretoria-conselho.html">Órgãos e Comitês</a></li>
+                <li><a class="nav-dropdown__link" href="/remuneracao-administracao.html">Remuneração da Administração</a></li>
+                <li><a class="nav-dropdown__link" href="/atas-assembleias.html">Atas e Assembleias</a></li>
+                <li><a class="nav-dropdown__link" href="/codigo-conduta.html">Ética &amp; Conformidade</a></li>
+                <li><a class="nav-dropdown__link" href="/estatuto-politicas.html">Estatuto, Políticas e Outros Documentos</a></li>
+                <li><a class="nav-dropdown__link" href="/dividendos-recompra.html">Dividendos e Juros sobre Capital Próprio</a></li>
+                <li><a class="nav-dropdown__link" href="/boletim-voto-distancia.html">Boletim de Voto a Distância</a></li>
+                <li><a class="nav-dropdown__link" href="/estatuto-social.html">Estatuto Social</a></li>
+                <li><a class="nav-dropdown__link" href="/informe-governanca.html">Informe de Governança</a></li>
               </ul>
             </li>
 
             <li class="nav-list__item nav-list__item--has-sub">
               <button class="nav-list__trigger" type="button" aria-haspopup="true" aria-expanded="false" data-nav-trigger>
-                Financeiro
+                Informações aos Investidores
                 <svg class="nav-list__chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
               </button>
               <ul class="nav-dropdown">
                 <li><a class="nav-dropdown__link" href="/central-resultados.html">Central de Resultados</a></li>
-                <li><a class="nav-dropdown__link" href="/apresentacoes.html">Apresentações</a></li>
-                <li><a class="nav-dropdown__link" href="/dividendos-recompra.html">Dividendos e Recompra de Ações</a></li>
-                <li><a class="nav-dropdown__link" href="/endividamento.html">Endividamento</a></li>
+                <li><a class="nav-dropdown__link" href="/documentos-cvm.html">Documentos entregues à CVM</a></li>
+                <li><a class="nav-dropdown__link" href="/fatos-relevantes.html">Fatos Relevantes e Comunicados</a></li>
+                <li><a class="nav-dropdown__link" href="/apresentacoes.html">Apresentações e Teleconferências</a></li>
+                <li><a class="nav-dropdown__link" href="/sustentabilidade.html">Relatório de Sustentabilidade</a></li>
+                <li><a class="nav-dropdown__link" href="/ratings-cobertura.html">Cobertura de Analista</a></li>
+                <li><a class="nav-dropdown__link" href="/recompra-acoes.html">Recompra de Ações</a></li>
+                <li><a class="nav-dropdown__link" href="/planilha-resultados.html">Planilha de Resultados</a></li>
+                <li><a class="nav-dropdown__link" href="/rating.html">Rating</a></li>
+                <li><a class="nav-dropdown__link" href="/projecoes-safra.html">Projeções de Safra</a></li>
+                <li><a class="nav-dropdown__link" href="/outros-documentos.html">Outros Documentos</a></li>
               </ul>
             </li>
 
             <li class="nav-list__item nav-list__item--has-sub">
               <button class="nav-list__trigger" type="button" aria-haspopup="true" aria-expanded="false" data-nav-trigger>
-                Investidores
+                Outras Informações
                 <svg class="nav-list__chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
               </button>
               <ul class="nav-dropdown">
-                <li><a class="nav-dropdown__link" href="/como-investir.html">Como Investir</a></li>
+                <li><a class="nav-dropdown__link" href="/informe-rendimentos.html">Informe de Rendimentos</a></li>
                 <li><a class="nav-dropdown__link" href="/calendario-eventos.html">Calendário de Eventos</a></li>
-                <li><a class="nav-dropdown__link" href="/documentos-cvm.html">Documentos CVM</a></li>
-                <li><a class="nav-dropdown__link" href="/ratings-cobertura.html">Ratings e Cobertura de Analistas</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-list__item nav-list__item--has-sub">
-              <button class="nav-list__trigger" type="button" aria-haspopup="true" aria-expanded="false" data-nav-trigger>
-                Contato
-                <svg class="nav-list__chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
-              </button>
-              <ul class="nav-dropdown">
+                <li><a class="nav-dropdown__link" href="/cotacoes-graficos.html">Cotações e Gráficos</a></li>
+                <li><a class="nav-dropdown__link" href="/perguntas-frequentes.html">Perguntas mais Frequentes</a></li>
+                <li><a class="nav-dropdown__link" href="/mailing.html">Alertas RI</a></li>
                 <li><a class="nav-dropdown__link" href="/fale-com-ri.html">Fale com RI</a></li>
-                <li><a class="nav-dropdown__link" href="/fatores-risco.html">Fatores de Risco</a></li>
-                <li><a class="nav-dropdown__link" href="/glossario.html">Glossário</a></li>
-                <li><a class="nav-dropdown__link" href="/mailing.html">Mailing</a></li>
-                <li><a class="nav-dropdown__link" href="/trabalhe-conosco.html">Trabalhe Conosco</a></li>
               </ul>
             </li>
 
@@ -164,18 +161,18 @@
           <div class="site-header__drawer-footer">
             <div class="site-header__drawer-tickers">
               <div class="site-header__drawer-ticker">
-                <span class="topbar__ticker-symbol">ASTR4</span>
+                <span class="topbar__ticker-symbol">SMTO3</span>
                 <span class="topbar__ticker-dot" aria-hidden="true">&middot;</span>
-                <span class="topbar__ticker-price">R$ 26,27</span>
+                <span class="topbar__ticker-price">R$ --</span>
                 <span class="topbar__ticker-change topbar__ticker-change--up" aria-label="Alta de 0,50%">
                   <svg viewBox="0 0 10 10" width="8" height="8" fill="currentColor" aria-hidden="true"><path d="M5 2 9 8H1z"/></svg>
                   0,50%
                 </span>
               </div>
               <div class="site-header__drawer-ticker">
-                <span class="topbar__ticker-symbol">ASTR3</span>
+                <span class="topbar__ticker-symbol">SMTO3</span>
                 <span class="topbar__ticker-dot" aria-hidden="true">&middot;</span>
-                <span class="topbar__ticker-price">R$ 22,15</span>
+                <span class="topbar__ticker-price">R$ --</span>
                 <span class="topbar__ticker-change topbar__ticker-change--down" aria-label="Baixa de 0,32%">
                   <svg viewBox="0 0 10 10" width="8" height="8" fill="currentColor" aria-hidden="true"><path d="M5 8 9 2H1z"/></svg>
                   0,32%
@@ -207,227 +204,26 @@
       <div class="site-header__overlay" data-nav-overlay aria-hidden="true"></div>
     </header>
 
-    <main class="summary">
-      <section class="summary__hero">
-        <span class="eyebrow">Astri RI · Coleção</span>
-        <h1>Sumário do projeto</h1>
-        <p>Índice completo de todas as páginas do projeto, organizadas pela estrutura de canais.</p>
-      </section>
-
-      <!-- Home -->
-      <section class="summary__group" aria-labelledby="group-home">
-        <h2 id="group-home" class="summary__group-title">Home</h2>
-        <div class="summary__grid">
-          <article class="summary__card">
-            <span class="summary__card-tag">Página principal</span>
-            <h3>Home</h3>
-            <p>Banner com slider, seção RI em 3 colunas, sobre com big numbers, mailing, contato e footer.</p>
-            <a class="summary__card-link" href="/">Ver página</a>
-          </article>
+    <main>
+      <section class="page-header" aria-labelledby="page-title">
+        <img class="page-header__bg" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1920&q=80" alt="" aria-hidden="true" />
+        <div class="page-header__overlay" aria-hidden="true"></div>
+        <div class="page-header__inner">
+          <ol class="page-header__breadcrumb" aria-label="Você está em">
+            <li><a href="/">Home</a></li>
+            <li><a href="/composicao-acionaria.html">Governança</a></li>
+            <li aria-current="page">Remuneração da Administração</li>
+          </ol>
+          <h1 id="page-title" class="page-header__title">Remuneração da Administração</h1>
+          <p class="page-header__lede">Documentos que regem a governança corporativa da companhia.</p>
         </div>
       </section>
 
-      <!-- A Companhia -->
-      <section class="summary__group" aria-labelledby="group-companhia">
-        <h2 id="group-companhia" class="summary__group-title">A Companhia</h2>
-        <div class="summary__grid">
-          <article class="summary__card">
-            <span class="summary__card-tag">Texto + imagens</span>
-            <h3>Visão Geral</h3>
-            <p>Missão, valores e posicionamento estratégico da companhia.</p>
-            <a class="summary__card-link" href="/visao-geral.html">Ver página</a>
-          </article>
+      <section class="page-section">
+        <div class="page-section__container">
 
-          <article class="summary__card">
-            <span class="summary__card-tag">Linha do tempo</span>
-            <h3>Nossa História</h3>
-            <p>Linha do tempo vertical com os principais marcos da trajetória da companhia.</p>
-            <a class="summary__card-link" href="/nossa-historia.html">Ver página</a>
-          </article>
+          <div data-ep-list></div>
 
-          <article class="summary__card">
-            <span class="summary__card-tag">Texto + imagens</span>
-            <h3>Estratégias e Vantagens Competitivas</h3>
-            <p>Pilares estratégicos e diferenciais que sustentam o crescimento da companhia.</p>
-            <a class="summary__card-link" href="/estrategias-vantagens.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Cards</span>
-            <h3>Portfólio</h3>
-            <p>Cards com título, descrição, imagem e link para páginas internas de cada produto ou serviço.</p>
-            <a class="summary__card-link" href="/portfolio.html">Ver página</a>
-          </article>
-        </div>
-      </section>
-
-      <!-- Governança -->
-      <section class="summary__group" aria-labelledby="group-governanca">
-        <h2 id="group-governanca" class="summary__group-title">Governança</h2>
-        <div class="summary__grid">
-          <article class="summary__card">
-            <span class="summary__card-tag">Tabela</span>
-            <h3>Composição Acionária</h3>
-            <p>Distribuição do capital social entre os acionistas da companhia.</p>
-            <a class="summary__card-link" href="/composicao-acionaria.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Cards</span>
-            <h3>Diretoria e Conselho</h3>
-            <p>Cards com foto, nome, cargo e link para LinkedIn de cada membro.</p>
-            <a class="summary__card-link" href="/diretoria-conselho.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Accordion + docs</span>
-            <h3>Estatuto, Políticas e Regimentos</h3>
-            <p>Accordion com grupos de documentos (Estatuto Social, Políticas, Regimentos) para download.</p>
-            <a class="summary__card-link" href="/estatuto-politicas.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Texto</span>
-            <h3>Código de Conduta e Ética</h3>
-            <p>Conteúdo editorial com os princípios e valores que guiam a conduta da companhia.</p>
-            <a class="summary__card-link" href="/codigo-conduta.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Accordion + docs</span>
-            <h3>Atas de Assembleias</h3>
-            <p>Accordion com atas de AGO, AGE e RCA agrupadas por ano, para download.</p>
-            <a class="summary__card-link" href="/atas-assembleias.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Texto + imagem + vídeo</span>
-            <h3>Sustentabilidade Corporativa</h3>
-            <p>Compromissos, iniciativas e resultados ESG da companhia.</p>
-            <a class="summary__card-link" href="/sustentabilidade.html">Ver página</a>
-          </article>
-        </div>
-      </section>
-
-      <!-- Financeiro -->
-      <section class="summary__group" aria-labelledby="group-financeiras">
-        <h2 id="group-financeiras" class="summary__group-title">Financeiro</h2>
-        <div class="summary__grid">
-          <article class="summary__card">
-            <span class="summary__card-tag">Tabela</span>
-            <h3>Central de Resultados</h3>
-            <p>Filtro de ano + tabela com arquivos por trimestre (Teleconferência, ITR, DFP, Vídeo, Transcrição).</p>
-            <a class="summary__card-link" href="/central-resultados.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Accordion</span>
-            <h3>Apresentações</h3>
-            <p>Apresentações institucionais e de resultados trimestrais agrupadas por ano para download.</p>
-            <a class="summary__card-link" href="/apresentacoes.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Gráfico + tabela</span>
-            <h3>Endividamento</h3>
-            <p>Perfil de dívida bruta, dívida líquida e cronograma de amortização.</p>
-            <a class="summary__card-link" href="/endividamento.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Gráfico dinâmico + tabela</span>
-            <h3>Dividendos e Recompra de Ações</h3>
-            <p>Gráfico dinâmico alimentado por Excel + tabela com histórico de proventos e recompras.</p>
-            <a class="summary__card-link" href="/dividendos-recompra.html">Ver página</a>
-          </article>
-        </div>
-      </section>
-
-      <!-- Investidores -->
-      <section class="summary__group" aria-labelledby="group-investidores">
-        <h2 id="group-investidores" class="summary__group-title">Investidores</h2>
-        <div class="summary__grid">
-          <article class="summary__card">
-            <span class="summary__card-tag">Accordion + docs</span>
-            <h3>Documentos CVM</h3>
-            <p>Formulários de referência, ITR, DFP e demais documentos enviados à CVM, para download.</p>
-            <a class="summary__card-link" href="/documentos-cvm.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Calendário + lista</span>
-            <h3>Calendário de Eventos</h3>
-            <p>Calendário com marcações de eventos cadastrados e lista lateral com próximos eventos.</p>
-            <a class="summary__card-link" href="/calendario-eventos.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Tabela</span>
-            <h3>Ratings e Cobertura de Analistas</h3>
-            <p>Tabela de ratings de crédito e tabela de analistas que cobrem os papéis da companhia.</p>
-            <a class="summary__card-link" href="/ratings-cobertura.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Texto + imagens</span>
-            <h3>Como Investir</h3>
-            <p>Passo a passo ilustrado para se tornar acionista da companhia.</p>
-            <a class="summary__card-link" href="/como-investir.html">Ver página</a>
-          </article>
-        </div>
-      </section>
-
-      <!-- Contato -->
-      <section class="summary__group" aria-labelledby="group-contato">
-        <h2 id="group-contato" class="summary__group-title">Contato</h2>
-        <div class="summary__grid">
-          <article class="summary__card">
-            <span class="summary__card-tag">Texto</span>
-            <h3>Glossário</h3>
-            <p>Lista alfabética de termos financeiros e de mercado de capitais com definições.</p>
-            <a class="summary__card-link" href="/glossario.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Formulário de contato</span>
-            <h3>Fale com RI</h3>
-            <p>Formulário de contato com nome, e-mail, assunto e mensagem + informações do time de RI.</p>
-            <a class="summary__card-link" href="/fale-com-ri.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Formulário de cadastro</span>
-            <h3>Mailing</h3>
-            <p>Formulário de cadastro para receber comunicados e resultados por e-mail.</p>
-            <a class="summary__card-link" href="/mailing.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Texto</span>
-            <h3>Fatores de Risco</h3>
-            <p>Riscos relevantes categorizados por dimensão (mercado, operacional, regulatório, ESG).</p>
-            <a class="summary__card-link" href="/fatores-risco.html">Ver página</a>
-          </article>
-
-          <article class="summary__card">
-            <span class="summary__card-tag">Formulário de cadastro</span>
-            <h3>Trabalhe Conosco</h3>
-            <p>Formulário de cadastro com upload de currículo e seleção de área de interesse.</p>
-            <a class="summary__card-link" href="/trabalhe-conosco.html">Ver página</a>
-          </article>
-        </div>
-      </section>
-
-      <!-- Legado -->
-      <section class="summary__group" aria-labelledby="group-legado">
-        <h2 id="group-legado" class="summary__group-title">Versões anteriores</h2>
-        <div class="summary__grid">
-          <article class="summary__card">
-            <span class="summary__card-tag">Versão 1 · Legado</span>
-            <h3>Central de Resultados — V1</h3>
-            <p>Primeira versão: filtro de ano + tabela com ícones por tipo de arquivo.</p>
-            <a class="summary__card-link" href="/central-resultados.html">Ver página</a>
-          </article>
         </div>
       </section>
     </main>
@@ -437,84 +233,53 @@
 
         <!-- Logo -->
         <div class="site-footer__top">
-          <img src="/assets/logotipo/logotipo-negative.svg" alt="Astri Solutions" class="site-footer__logo" />
+          <img src="/assets/logotipo/logotipo-negative.svg" alt="São Martinho S.A." class="site-footer__logo" />
         </div>
 
         <div class="site-footer__grid">
-
-          <!-- Colunas 1–2: Info (Endereço + Contato empilhados) -->
-          <div class="site-footer__info">
-            <div class="site-footer__block">
-              <h4>Endereço</h4>
-              <p class="site-footer__address-text">Avenida Brigadeiro Faria Lima, nº 2.277, 19º andar, cj.1702, Ed. Plaza Iguatemi, São Paulo – SP, CEP 01452-000</p>
-            </div>
-            <div class="site-footer__block">
-              <h4>Entre em Contato</h4>
-              <div class="site-footer__contact-details">
-                <a href="mailto:comercial@astri.solutions">comercial@astri.solutions</a>
-                <a href="tel:+5511984447855">+55 (11) 98444-7855</a>
-                <p>Nosso time de atendimento está disponível de segunda à sexta-feira, das 08h às 21h, exceto feriados.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Coluna 3: A Companhia -->
+          <!-- Coluna A Companhia -->
           <div class="site-footer__block">
             <h4>A Companhia</h4>
             <ul>
-              <li><a href="/visao-geral.html">Visão Geral</a></li>
-              <li><a href="/nossa-historia.html">Histórico e Perfil Corporativo</a></li>
-              <li><a href="/estrategias-vantagens.html">Estratégias e Vantagens Competitivas</a></li>
-              <li><a href="/investor-day.html">Investor Day</a></li>
+              <li><a href="/visao-geral.html">Visão Institucional</a></li>
+              <li><a href="/estrategias-vantagens.html">Por que investir na São Martinho</a></li>
             </ul>
           </div>
 
-          <!-- Coluna 3: Governança -->
+          <!-- Coluna Governança -->
           <div class="site-footer__block">
-            <h4>Governança</h4>
+            <h4>Governança Corporativa</h4>
             <ul>
+              <li><a href="/novo-mercado.html">Novo Mercado</a></li>
               <li><a href="/composicao-acionaria.html">Composição Acionária</a></li>
-              <li><a href="/diretoria-conselho.html">Diretoria e Conselhos</a></li>
-              <li><a href="/estatuto-politicas.html">Estatuto, Políticas e Regimentos</a></li>
-              <li><a href="/codigo-conduta.html">Código de Conduta e Ética</a></li>
-              <li><a href="/atas-assembleias.html">Atas de Assembleias</a></li>
-              <li><a href="/sustentabilidade.html">Sustentabilidade Corporativa</a></li>
+              <li><a href="/diretoria-conselho.html">Órgãos e Comitês</a></li>
+              <li><a href="/atas-assembleias.html">Atas e Assembleias</a></li>
+              <li><a href="/codigo-conduta.html">Ética &amp; Conformidade</a></li>
+              <li><a href="/dividendos-recompra.html">Dividendos e JCP</a></li>
             </ul>
           </div>
 
-          <!-- Coluna 4: Financeiro -->
+          <!-- Coluna Informações aos Investidores -->
           <div class="site-footer__block">
-            <h4>Financeiro</h4>
+            <h4>Informações aos Investidores</h4>
             <ul>
               <li><a href="/central-resultados.html">Central de Resultados</a></li>
-              <li><a href="/apresentacoes.html">Apresentações</a></li>
-              <li><a href="/endividamento.html">Endividamento</a></li>
-              <li><a href="/dividendos-recompra.html">Dividendos e Recompra de Ações</a></li>
-            </ul>
-          </div>
-
-          <!-- Coluna 5: Investidores -->
-          <div class="site-footer__block">
-            <h4>Investidores</h4>
-            <ul>
               <li><a href="/documentos-cvm.html">Documentos CVM</a></li>
-              <li><a href="/calendario-eventos.html">Calendário de Eventos</a></li>
-              <li><a href="/ratings-cobertura.html">Ratings e Cobertura de Analistas</a></li>
-              <li><a href="/como-investir.html">Como Investir</a></li>
+              <li><a href="/fatos-relevantes.html">Fatos Relevantes</a></li>
+              <li><a href="/apresentacoes.html">Apresentações</a></li>
+              <li><a href="/sustentabilidade.html">Sustentabilidade</a></li>
             </ul>
           </div>
 
-          <!-- Coluna 6: Contato -->
+          <!-- Coluna Outras Informações -->
           <div class="site-footer__block">
-            <h4>Contato</h4>
+            <h4>Outras Informações</h4>
             <ul>
-              <li><a href="/glossario.html">Glossário</a></li>
+              <li><a href="/calendario-eventos.html">Calendário de Eventos</a></li>
+              <li><a href="/mailing.html">Alertas RI</a></li>
               <li><a href="/fale-com-ri.html">Fale com RI</a></li>
-              <li><a href="/mailing.html">Mailing</a></li>
-              <li><a href="/fatores-risco.html">Fatores de Risco</a></li>
             </ul>
           </div>
-
         </div>
 
         <div class="site-footer__bottom">
@@ -526,7 +291,7 @@
               <a href="#">Sitemap</a>
             </div>
             <div class="site-footer__social">
-              <span>Siga a Astri:</span>
+              <span>Siga a São Martinho:</span>
               <a href="#" aria-label="Facebook">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
               </a>
@@ -540,10 +305,10 @@
           </div>
           <div class="site-footer__bottom-row site-footer__bottom-row--spread">
             <span>Contato: 0800 728 9000</span>
-            <span>©Copyright Astri 2026. Todos os direitos reservados.</span>
-            <a href="https://astri.solutions" class="site-footer__powered" target="_blank" rel="noopener" aria-label="Site desenvolvido por Astri Solutions">
+            <span>©Copyright São Martinho S.A. 2026. Todos os direitos reservados.</span>
+            <a href="https://saomartinho.com.br" class="site-footer__powered" target="_blank" rel="noopener" aria-label="Site desenvolvido por São Martinho S.A.">
               <span>Powered by</span>
-              <img src="/assets/logotipo/logotipo-negative.svg" alt="Astri Solutions" />
+              <img src="/assets/logotipo/logotipo-negative.svg" alt="São Martinho S.A." />
             </a>
           </div>
           <p class="site-footer__legal">Os Formulários disponibilizados no site da Companhia não se destinam aos fins de propaganda institucional, visto que são cópias dos documentos apresentados perante órgãos regulatórios do mercado de capitais do Brasil ou do exterior, em atendimento à legislação aplicável, incluindo a Resolução CVM nº 80/2022, a Lei nº 6.404/1976, a Lei nº 13.303/2016, a Securities Act of 1993 e a Securities Exchange Act de 1994.</p>
@@ -565,6 +330,6 @@
       </div>
     </div>
 
-    <script type="module" src="/scripts/page.js"></script>
+    <script type="module" src="/scripts/estatuto-politicas.js"></script>
   </body>
 </html>

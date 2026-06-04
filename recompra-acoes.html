@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nossa História — Astri RI</title>
-    <meta name="description" content="A trajetória da Astri Solutions desde sua fundação até o presente." />
+    <title>Recompra de Ações — São Martinho RI</title>
+    <meta name="description" content="Histórico de dividendos distribuídos e programas de recompra de ações da companhia." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/main.scss" />
@@ -31,18 +31,18 @@
         <!-- Center: Tickers -->
         <div class="topbar__tickers" aria-label="Cotação" aria-live="polite">
           <div class="topbar__ticker is-active" data-topbar-ticker>
-            <span class="topbar__ticker-symbol">ASTR4</span>
+            <span class="topbar__ticker-symbol">SMTO3</span>
             <span class="topbar__ticker-dot" aria-hidden="true">·</span>
-            <span class="topbar__ticker-price">R$ 26,27</span>
+            <span class="topbar__ticker-price">R$ --</span>
             <span class="topbar__ticker-change topbar__ticker-change--up" aria-label="Alta de 0,50%">
               <svg viewBox="0 0 10 10" width="8" height="8" fill="currentColor" aria-hidden="true"><path d="M5 2 9 8H1z"/></svg>
               0,50%
             </span>
           </div>
           <div class="topbar__ticker" data-topbar-ticker>
-            <span class="topbar__ticker-symbol">ASTR3</span>
+            <span class="topbar__ticker-symbol">SMTO3</span>
             <span class="topbar__ticker-dot" aria-hidden="true">·</span>
-            <span class="topbar__ticker-price">R$ 22,15</span>
+            <span class="topbar__ticker-price">R$ --</span>
             <span class="topbar__ticker-change topbar__ticker-change--down" aria-label="Baixa de 0,32%">
               <svg viewBox="0 0 10 10" width="8" height="8" fill="currentColor" aria-hidden="true"><path d="M5 8 9 2H1z"/></svg>
               0,32%
@@ -79,12 +79,12 @@
 
     <header class="site-header">
       <div class="site-header__inner">
-        <a href="/" class="site-header__brand" aria-label="Astri Solutions">
-          <img src="/assets/logotipo/logotipo-original.svg" alt="Astri Solutions" class="site-header__logo" />
+        <a href="/" class="site-header__brand" aria-label="São Martinho S.A.">
+          <img src="/assets/logotipo/logotipo-original.svg" alt="São Martinho S.A." class="site-header__logo" />
         </a>
         <nav class="site-header__nav" id="site-nav" data-nav aria-label="Principal">
           <div class="site-header__drawer-top">
-            <img src="/assets/logotipo/logotipo-negative.svg" alt="Astri Solutions" class="site-header__drawer-logo" />
+            <img src="/assets/logotipo/logotipo-negative.svg" alt="São Martinho S.A." class="site-header__drawer-logo" />
             <button class="site-header__drawer-close" type="button" aria-label="Fechar menu" data-nav-close>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
@@ -97,66 +97,63 @@
                 <svg class="nav-list__chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
               </button>
               <ul class="nav-dropdown">
-                <li><a class="nav-dropdown__link" href="/visao-geral.html">Visão Geral</a></li>
-                <li><a class="nav-dropdown__link" href="/nossa-historia.html">Nossa História</a></li>
-                <li><a class="nav-dropdown__link" href="/estrategias-vantagens.html">Estratégias e Vantagens Competitivas</a></li>
-                <li><a class="nav-dropdown__link" href="/portfolio.html">Portfólio</a></li>
-                <li><a class="nav-dropdown__link" href="/nosso-time.html">Nosso Time</a></li>
+                <li><a class="nav-dropdown__link" href="/visao-geral.html">Visão Institucional</a></li>
+                <li><a class="nav-dropdown__link" href="/estrategias-vantagens.html">Por que investir na São Martinho</a></li>
               </ul>
             </li>
 
             <li class="nav-list__item nav-list__item--has-sub">
               <button class="nav-list__trigger" type="button" aria-haspopup="true" aria-expanded="false" data-nav-trigger>
-                Governança
+                Governança Corporativa
                 <svg class="nav-list__chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
               </button>
               <ul class="nav-dropdown">
+                <li><a class="nav-dropdown__link" href="/novo-mercado.html">Novo Mercado</a></li>
                 <li><a class="nav-dropdown__link" href="/composicao-acionaria.html">Composição Acionária</a></li>
-                <li><a class="nav-dropdown__link" href="/diretoria-conselho.html">Diretoria e Conselho</a></li>
-                <li><a class="nav-dropdown__link" href="/estatuto-politicas.html">Estatuto, Políticas e Regimentos</a></li>
-                <li><a class="nav-dropdown__link" href="/atas-assembleias.html">Atas de Assembleias</a></li>
-                <li><a class="nav-dropdown__link" href="/codigo-conduta.html">Código de Conduta e Ética</a></li>
-                <li><a class="nav-dropdown__link" href="/sustentabilidade.html">Sustentabilidade Corporativa</a></li>
+                <li><a class="nav-dropdown__link" href="/diretoria-conselho.html">Órgãos e Comitês</a></li>
+                <li><a class="nav-dropdown__link" href="/remuneracao-administracao.html">Remuneração da Administração</a></li>
+                <li><a class="nav-dropdown__link" href="/atas-assembleias.html">Atas e Assembleias</a></li>
+                <li><a class="nav-dropdown__link" href="/codigo-conduta.html">Ética &amp; Conformidade</a></li>
+                <li><a class="nav-dropdown__link" href="/estatuto-politicas.html">Estatuto, Políticas e Outros Documentos</a></li>
+                <li><a class="nav-dropdown__link" href="/dividendos-recompra.html">Dividendos e Juros sobre Capital Próprio</a></li>
+                <li><a class="nav-dropdown__link" href="/boletim-voto-distancia.html">Boletim de Voto a Distância</a></li>
+                <li><a class="nav-dropdown__link" href="/estatuto-social.html">Estatuto Social</a></li>
+                <li><a class="nav-dropdown__link" href="/informe-governanca.html">Informe de Governança</a></li>
               </ul>
             </li>
 
             <li class="nav-list__item nav-list__item--has-sub">
               <button class="nav-list__trigger" type="button" aria-haspopup="true" aria-expanded="false" data-nav-trigger>
-                Financeiro
+                Informações aos Investidores
                 <svg class="nav-list__chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
               </button>
               <ul class="nav-dropdown">
                 <li><a class="nav-dropdown__link" href="/central-resultados.html">Central de Resultados</a></li>
-                <li><a class="nav-dropdown__link" href="/apresentacoes.html">Apresentações</a></li>
-                <li><a class="nav-dropdown__link" href="/dividendos-recompra.html">Dividendos e Recompra de Ações</a></li>
-                <li><a class="nav-dropdown__link" href="/endividamento.html">Endividamento</a></li>
+                <li><a class="nav-dropdown__link" href="/documentos-cvm.html">Documentos entregues à CVM</a></li>
+                <li><a class="nav-dropdown__link" href="/fatos-relevantes.html">Fatos Relevantes e Comunicados</a></li>
+                <li><a class="nav-dropdown__link" href="/apresentacoes.html">Apresentações e Teleconferências</a></li>
+                <li><a class="nav-dropdown__link" href="/sustentabilidade.html">Relatório de Sustentabilidade</a></li>
+                <li><a class="nav-dropdown__link" href="/ratings-cobertura.html">Cobertura de Analista</a></li>
+                <li><a class="nav-dropdown__link" href="/recompra-acoes.html">Recompra de Ações</a></li>
+                <li><a class="nav-dropdown__link" href="/planilha-resultados.html">Planilha de Resultados</a></li>
+                <li><a class="nav-dropdown__link" href="/rating.html">Rating</a></li>
+                <li><a class="nav-dropdown__link" href="/projecoes-safra.html">Projeções de Safra</a></li>
+                <li><a class="nav-dropdown__link" href="/outros-documentos.html">Outros Documentos</a></li>
               </ul>
             </li>
 
             <li class="nav-list__item nav-list__item--has-sub">
               <button class="nav-list__trigger" type="button" aria-haspopup="true" aria-expanded="false" data-nav-trigger>
-                Investidores
+                Outras Informações
                 <svg class="nav-list__chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
               </button>
               <ul class="nav-dropdown">
-                <li><a class="nav-dropdown__link" href="/como-investir.html">Como Investir</a></li>
+                <li><a class="nav-dropdown__link" href="/informe-rendimentos.html">Informe de Rendimentos</a></li>
                 <li><a class="nav-dropdown__link" href="/calendario-eventos.html">Calendário de Eventos</a></li>
-                <li><a class="nav-dropdown__link" href="/documentos-cvm.html">Documentos CVM</a></li>
-                <li><a class="nav-dropdown__link" href="/ratings-cobertura.html">Ratings e Cobertura de Analistas</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-list__item nav-list__item--has-sub">
-              <button class="nav-list__trigger" type="button" aria-haspopup="true" aria-expanded="false" data-nav-trigger>
-                Contato
-                <svg class="nav-list__chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
-              </button>
-              <ul class="nav-dropdown">
+                <li><a class="nav-dropdown__link" href="/cotacoes-graficos.html">Cotações e Gráficos</a></li>
+                <li><a class="nav-dropdown__link" href="/perguntas-frequentes.html">Perguntas mais Frequentes</a></li>
+                <li><a class="nav-dropdown__link" href="/mailing.html">Alertas RI</a></li>
                 <li><a class="nav-dropdown__link" href="/fale-com-ri.html">Fale com RI</a></li>
-                <li><a class="nav-dropdown__link" href="/fatores-risco.html">Fatores de Risco</a></li>
-                <li><a class="nav-dropdown__link" href="/glossario.html">Glossário</a></li>
-                <li><a class="nav-dropdown__link" href="/mailing.html">Mailing</a></li>
-                <li><a class="nav-dropdown__link" href="/trabalhe-conosco.html">Trabalhe Conosco</a></li>
               </ul>
             </li>
 
@@ -164,18 +161,18 @@
           <div class="site-header__drawer-footer">
             <div class="site-header__drawer-tickers">
               <div class="site-header__drawer-ticker">
-                <span class="topbar__ticker-symbol">ASTR4</span>
+                <span class="topbar__ticker-symbol">SMTO3</span>
                 <span class="topbar__ticker-dot" aria-hidden="true">&middot;</span>
-                <span class="topbar__ticker-price">R$ 26,27</span>
+                <span class="topbar__ticker-price">R$ --</span>
                 <span class="topbar__ticker-change topbar__ticker-change--up" aria-label="Alta de 0,50%">
                   <svg viewBox="0 0 10 10" width="8" height="8" fill="currentColor" aria-hidden="true"><path d="M5 2 9 8H1z"/></svg>
                   0,50%
                 </span>
               </div>
               <div class="site-header__drawer-ticker">
-                <span class="topbar__ticker-symbol">ASTR3</span>
+                <span class="topbar__ticker-symbol">SMTO3</span>
                 <span class="topbar__ticker-dot" aria-hidden="true">&middot;</span>
-                <span class="topbar__ticker-price">R$ 22,15</span>
+                <span class="topbar__ticker-price">R$ --</span>
                 <span class="topbar__ticker-change topbar__ticker-change--down" aria-label="Baixa de 0,32%">
                   <svg viewBox="0 0 10 10" width="8" height="8" fill="currentColor" aria-hidden="true"><path d="M5 8 9 2H1z"/></svg>
                   0,32%
@@ -207,115 +204,163 @@
       <div class="site-header__overlay" data-nav-overlay aria-hidden="true"></div>
     </header>
 
-    <main>
+    <main data-div-main>
+
+      <!-- ===================================================
+           PAGE HEADER
+           =================================================== -->
       <section class="page-header" aria-labelledby="page-title">
-        <img class="page-header__bg" src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1920&q=80" alt="" aria-hidden="true" />
+        <img class="page-header__bg" src="https://images.unsplash.com/photo-1554260570-e9689a3418b8?auto=format&fit=crop&w=1920&q=80" alt="" aria-hidden="true" />
         <div class="page-header__overlay" aria-hidden="true"></div>
         <div class="page-header__inner">
           <ol class="page-header__breadcrumb" aria-label="Você está em">
             <li><a href="/">Home</a></li>
-            <li><a href="/visao-geral.html">A Companhia</a></li>
-            <li aria-current="page">Nossa História</li>
+            <li><a href="/central-resultados.html">Financeiro</a></li>
+            <li aria-current="page">Recompra de Ações</li>
           </ol>
-          <h1 id="page-title" class="page-header__title">Nossa História</h1>
-          <p class="page-header__lede">A trajetória que nos trouxe até aqui, marco a marco.</p>
+          <h1 id="page-title" class="page-header__title">Recompra de Ações</h1>
+          <p class="page-header__lede">Programas de recompra de ações aprovados e em andamento.</p>
         </div>
       </section>
 
-      <section class="timeline-section">
-        <div class="timeline" aria-label="Linha do tempo">
+      <!-- ===================================================
+           KPIs — Proventos
+           =================================================== -->
+      <section class="page-section page-section--alt" aria-label="Indicadores de proventos" data-reveal>
+        <div class="page-section__container">
+          <div class="div-kpis">
+            <div class="div-kpi" data-reveal>
+              <span class="div-kpi__label">Total Distribuído</span>
+              <span class="div-kpi__value" data-kpi="total">—</span>
+            </div>
+            <div class="div-kpi" data-reveal>
+              <span class="div-kpi__label">Últ. 12 meses</span>
+              <span class="div-kpi__value" data-kpi="ult12">—</span>
+            </div>
+            <div class="div-kpi" data-reveal>
+              <span class="div-kpi__label">Provento/ação (últ. 12m)</span>
+              <span class="div-kpi__value" data-kpi="provento">—</span>
+            </div>
+            <div class="div-kpi" data-reveal>
+              <span class="div-kpi__label">Distribuições realizadas</span>
+              <span class="div-kpi__value" data-kpi="count">—</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <!-- Linha vertical + preenchimento por scroll -->
-          <div class="timeline__track" data-timeline-track aria-hidden="true">
-            <div class="timeline__track-fill" data-timeline-fill></div>
+      <!-- ===================================================
+           GRÁFICO + TABELA DE DIVIDENDOS
+           =================================================== -->
+      <section class="page-section" aria-labelledby="sec-div-title" data-reveal>
+        <div class="page-section__container">
+
+          <div class="div-section-header">
+            <h2 id="sec-div-title" class="div-section-header__title">Histórico de Proventos</h2>
+            <a class="div-download-btn" href="#" data-div-download aria-label="Baixar planilha de dividendos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Baixar planilha
+            </a>
           </div>
 
-          <!-- 1999 -->
-          <article class="timeline__item" data-timeline-item>
-            <div class="timeline__node">
-              <span class="timeline__dot" aria-hidden="true"></span>
+          <!-- Gráfico -->
+          <div class="div-chart-card" data-reveal>
+            <div class="div-chart-card__inner">
+              <canvas id="div-chart" aria-label="Gráfico de proventos por ano" role="img"></canvas>
             </div>
-            <div class="timeline__year-wrap">
-              <span class="timeline__year">1999</span>
-            </div>
-            <div class="timeline__content">
-              <h3 class="timeline__title">Fundação</h3>
-              <p class="timeline__desc">A empresa nasce com a missão de transformar o mercado de capitais brasileiro, conectando investidores e companhias com transparência e agilidade.</p>
-            </div>
-          </article>
+          </div>
 
-          <!-- 2004 -->
-          <article class="timeline__item" data-timeline-item>
-            <div class="timeline__node">
-              <span class="timeline__dot" aria-hidden="true"></span>
+          <!-- Filtro + tabela -->
+          <div class="div-table-header" data-reveal>
+            <h3 class="div-table-header__title">Detalhamento por distribuição</h3>
+            <div class="page-filter__group">
+              <span class="page-filter__label">ANO</span>
+              <span class="select">
+                <select class="select__field" data-div-year aria-label="Filtrar por ano">
+                  <option value="">Todos</option>
+                </select>
+              </span>
             </div>
-            <div class="timeline__year-wrap">
-              <span class="timeline__year">2004</span>
-            </div>
-            <div class="timeline__content">
-              <h3 class="timeline__title">Primeiro IPO</h3>
-              <p class="timeline__desc">A companhia abre seu capital na B3 com uma oferta pública inicial bem-sucedida, captando R$ 480 milhões e ampliando sua base de acionistas.</p>
-            </div>
-          </article>
+          </div>
 
-          <!-- 2009 -->
-          <article class="timeline__item" data-timeline-item>
-            <div class="timeline__node">
-              <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="data-table" data-reveal>
+            <div class="data-table__scroller">
+              <table aria-label="Histórico de dividendos e JCP">
+                <thead>
+                  <tr>
+                    <th>Período</th>
+                    <th>Tipo</th>
+                    <th>Valor/ação</th>
+                    <th>Data-base</th>
+                    <th>Pagamento</th>
+                    <th>Total distribuído</th>
+                  </tr>
+                </thead>
+                <tbody data-div-tbody>
+                  <tr><td colspan="6" class="div-table__empty">Carregando dados…</td></tr>
+                </tbody>
+              </table>
             </div>
-            <div class="timeline__year-wrap">
-              <span class="timeline__year">2009</span>
-            </div>
-            <div class="timeline__content">
-              <h3 class="timeline__title">Expansão Nacional</h3>
-              <p class="timeline__desc">Com presença em 12 estados, a empresa consolida sua posição como líder regional e inicia operações em novos segmentos estratégicos.</p>
-            </div>
-          </article>
-
-          <!-- 2015 -->
-          <article class="timeline__item" data-timeline-item>
-            <div class="timeline__node">
-              <span class="timeline__dot" aria-hidden="true"></span>
-            </div>
-            <div class="timeline__year-wrap">
-              <span class="timeline__year">2015</span>
-            </div>
-            <div class="timeline__content">
-              <h3 class="timeline__title">Aquisição Estratégica</h3>
-              <p class="timeline__desc">A incorporação da Grupo Norte amplia o portfólio em 40% e posiciona a companhia entre as cinco maiores do setor no país.</p>
-            </div>
-          </article>
-
-          <!-- 2019 -->
-          <article class="timeline__item" data-timeline-item>
-            <div class="timeline__node">
-              <span class="timeline__dot" aria-hidden="true"></span>
-            </div>
-            <div class="timeline__year-wrap">
-              <span class="timeline__year">2019</span>
-            </div>
-            <div class="timeline__content">
-              <h3 class="timeline__title">Internacionalização</h3>
-              <p class="timeline__desc">Abertura do escritório em Lisboa marca a entrada no mercado europeu, com foco em Portugal e Espanha como principais mercados-alvo.</p>
-            </div>
-          </article>
-
-          <!-- 2024 -->
-          <article class="timeline__item" data-timeline-item>
-            <div class="timeline__node">
-              <span class="timeline__dot" aria-hidden="true"></span>
-            </div>
-            <div class="timeline__year-wrap">
-              <span class="timeline__year">2024</span>
-            </div>
-            <div class="timeline__content">
-              <h3 class="timeline__title">25 Anos de Trajetória</h3>
-              <p class="timeline__desc">A companhia celebra 25 anos com receita recorde de R$ 2,1 bilhões, presença em 26 estados e mais de 280 colaboradores dedicados ao crescimento sustentável.</p>
-            </div>
-          </article>
+          </div>
 
         </div>
       </section>
+
+      <!-- ===================================================
+           RECOMPRA DE AÇÕES
+           =================================================== -->
+      <section class="page-section page-section--alt" aria-labelledby="sec-rec-title" data-reveal>
+        <div class="page-section__container">
+
+          <h2 id="sec-rec-title" class="div-section-header__title" style="margin-bottom: 2rem;">Programas de Recompra</h2>
+
+          <!-- KPIs recompra -->
+          <div class="div-kpis div-kpis--rec" data-reveal>
+            <div class="div-kpi">
+              <span class="div-kpi__label">Total investido</span>
+              <span class="div-kpi__value" data-kpi="rec-total">—</span>
+            </div>
+            <div class="div-kpi">
+              <span class="div-kpi__label">Ações autorizadas</span>
+              <span class="div-kpi__value" data-kpi="rec-qtd-aut">—</span>
+            </div>
+            <div class="div-kpi">
+              <span class="div-kpi__label">Ações recompradas</span>
+              <span class="div-kpi__value" data-kpi="rec-qtd-rec">—</span>
+            </div>
+            <div class="div-kpi">
+              <span class="div-kpi__label">Execução total</span>
+              <span class="div-kpi__value" data-kpi="rec-pct">—</span>
+            </div>
+          </div>
+
+          <!-- Tabela recompra -->
+          <div class="data-table" style="margin-top: 2rem;" data-reveal>
+            <div class="data-table__scroller">
+              <table aria-label="Programas de recompra de ações">
+                <thead>
+                  <tr>
+                    <th>Programa</th>
+                    <th>Início</th>
+                    <th>Término</th>
+                    <th>Qtd. autorizada</th>
+                    <th>Qtd. recomprada</th>
+                    <th>Execução</th>
+                    <th>Total gasto</th>
+                    <th>Preço médio</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody data-recompra-tbody>
+                  <tr><td colspan="9" class="div-table__empty">Carregando dados…</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
     </main>
 
     <footer class="site-footer">
@@ -323,84 +368,53 @@
 
         <!-- Logo -->
         <div class="site-footer__top">
-          <img src="/assets/logotipo/logotipo-negative.svg" alt="Astri Solutions" class="site-footer__logo" />
+          <img src="/assets/logotipo/logotipo-negative.svg" alt="São Martinho S.A." class="site-footer__logo" />
         </div>
 
         <div class="site-footer__grid">
-
-          <!-- Colunas 1–2: Info (Endereço + Contato empilhados) -->
-          <div class="site-footer__info">
-            <div class="site-footer__block">
-              <h4>Endereço</h4>
-              <p class="site-footer__address-text">Avenida Brigadeiro Faria Lima, nº 2.277, 19º andar, cj.1702, Ed. Plaza Iguatemi, São Paulo – SP, CEP 01452-000</p>
-            </div>
-            <div class="site-footer__block">
-              <h4>Entre em Contato</h4>
-              <div class="site-footer__contact-details">
-                <a href="mailto:comercial@astri.solutions">comercial@astri.solutions</a>
-                <a href="tel:+5511984447855">+55 (11) 98444-7855</a>
-                <p>Nosso time de atendimento está disponível de segunda à sexta-feira, das 08h às 21h, exceto feriados.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Coluna 3: A Companhia -->
+          <!-- Coluna A Companhia -->
           <div class="site-footer__block">
             <h4>A Companhia</h4>
             <ul>
-              <li><a href="/visao-geral.html">Visão Geral</a></li>
-              <li><a href="/nossa-historia.html">Histórico e Perfil Corporativo</a></li>
-              <li><a href="/estrategias-vantagens.html">Estratégias e Vantagens Competitivas</a></li>
-              <li><a href="/investor-day.html">Investor Day</a></li>
+              <li><a href="/visao-geral.html">Visão Institucional</a></li>
+              <li><a href="/estrategias-vantagens.html">Por que investir na São Martinho</a></li>
             </ul>
           </div>
 
-          <!-- Coluna 3: Governança -->
+          <!-- Coluna Governança -->
           <div class="site-footer__block">
-            <h4>Governança</h4>
+            <h4>Governança Corporativa</h4>
             <ul>
+              <li><a href="/novo-mercado.html">Novo Mercado</a></li>
               <li><a href="/composicao-acionaria.html">Composição Acionária</a></li>
-              <li><a href="/diretoria-conselho.html">Diretoria e Conselhos</a></li>
-              <li><a href="/estatuto-politicas.html">Estatuto, Políticas e Regimentos</a></li>
-              <li><a href="/codigo-conduta.html">Código de Conduta e Ética</a></li>
-              <li><a href="/atas-assembleias.html">Atas de Assembleias</a></li>
-              <li><a href="/sustentabilidade.html">Sustentabilidade Corporativa</a></li>
+              <li><a href="/diretoria-conselho.html">Órgãos e Comitês</a></li>
+              <li><a href="/atas-assembleias.html">Atas e Assembleias</a></li>
+              <li><a href="/codigo-conduta.html">Ética &amp; Conformidade</a></li>
+              <li><a href="/dividendos-recompra.html">Dividendos e JCP</a></li>
             </ul>
           </div>
 
-          <!-- Coluna 4: Financeiro -->
+          <!-- Coluna Informações aos Investidores -->
           <div class="site-footer__block">
-            <h4>Financeiro</h4>
+            <h4>Informações aos Investidores</h4>
             <ul>
               <li><a href="/central-resultados.html">Central de Resultados</a></li>
-              <li><a href="/apresentacoes.html">Apresentações</a></li>
-              <li><a href="/endividamento.html">Endividamento</a></li>
-              <li><a href="/dividendos-recompra.html">Dividendos e Recompra de Ações</a></li>
-            </ul>
-          </div>
-
-          <!-- Coluna 5: Investidores -->
-          <div class="site-footer__block">
-            <h4>Investidores</h4>
-            <ul>
               <li><a href="/documentos-cvm.html">Documentos CVM</a></li>
-              <li><a href="/calendario-eventos.html">Calendário de Eventos</a></li>
-              <li><a href="/ratings-cobertura.html">Ratings e Cobertura de Analistas</a></li>
-              <li><a href="/como-investir.html">Como Investir</a></li>
+              <li><a href="/fatos-relevantes.html">Fatos Relevantes</a></li>
+              <li><a href="/apresentacoes.html">Apresentações</a></li>
+              <li><a href="/sustentabilidade.html">Sustentabilidade</a></li>
             </ul>
           </div>
 
-          <!-- Coluna 6: Contato -->
+          <!-- Coluna Outras Informações -->
           <div class="site-footer__block">
-            <h4>Contato</h4>
+            <h4>Outras Informações</h4>
             <ul>
-              <li><a href="/glossario.html">Glossário</a></li>
+              <li><a href="/calendario-eventos.html">Calendário de Eventos</a></li>
+              <li><a href="/mailing.html">Alertas RI</a></li>
               <li><a href="/fale-com-ri.html">Fale com RI</a></li>
-              <li><a href="/mailing.html">Mailing</a></li>
-              <li><a href="/fatores-risco.html">Fatores de Risco</a></li>
             </ul>
           </div>
-
         </div>
 
         <div class="site-footer__bottom">
@@ -412,7 +426,7 @@
               <a href="#">Sitemap</a>
             </div>
             <div class="site-footer__social">
-              <span>Siga a Astri:</span>
+              <span>Siga a São Martinho:</span>
               <a href="#" aria-label="Facebook">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
               </a>
@@ -426,10 +440,10 @@
           </div>
           <div class="site-footer__bottom-row site-footer__bottom-row--spread">
             <span>Contato: 0800 728 9000</span>
-            <span>©Copyright Astri 2026. Todos os direitos reservados.</span>
-            <a href="https://astri.solutions" class="site-footer__powered" target="_blank" rel="noopener" aria-label="Site desenvolvido por Astri Solutions">
+            <span>©Copyright São Martinho S.A. 2026. Todos os direitos reservados.</span>
+            <a href="https://saomartinho.com.br" class="site-footer__powered" target="_blank" rel="noopener" aria-label="Site desenvolvido por São Martinho S.A.">
               <span>Powered by</span>
-              <img src="/assets/logotipo/logotipo-negative.svg" alt="Astri Solutions" />
+              <img src="/assets/logotipo/logotipo-negative.svg" alt="São Martinho S.A." />
             </a>
           </div>
           <p class="site-footer__legal">Os Formulários disponibilizados no site da Companhia não se destinam aos fins de propaganda institucional, visto que são cópias dos documentos apresentados perante órgãos regulatórios do mercado de capitais do Brasil ou do exterior, em atendimento à legislação aplicável, incluindo a Resolução CVM nº 80/2022, a Lei nº 6.404/1976, a Lei nº 13.303/2016, a Securities Act of 1993 e a Securities Exchange Act de 1994.</p>
@@ -451,6 +465,6 @@
       </div>
     </div>
 
-    <script type="module" src="/scripts/nossa-historia.js"></script>
+    <script type="module" src="/scripts/dividendos-recompra.js"></script>
   </body>
 </html>
