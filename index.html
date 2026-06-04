@@ -206,7 +206,7 @@
 
     <main>
       <!-- =======================================================
-           1. BANNER / SLIDER
+           1. HERO / SLIDER
            ======================================================= -->
       <section class="hero" aria-roledescription="carousel" aria-label="Destaques">
         <div class="hero__track" data-hero-track>
@@ -216,13 +216,7 @@
             <div class="hero__overlay"></div>
             <div class="hero__content">
               <div class="hero__inner">
-                <span class="hero__eyebrow">Resultados 4T · 2025</span>
-                <h1 class="hero__title">Crescimento <em>consistente</em><br />e disciplinado de capital</h1>
-                <p class="hero__text">Conheça os principais destaques operacionais e financeiros do trimestre, com expansão de margem e geração de caixa recorde.</p>
-                <div class="hero__actions">
-                  <a href="/central-resultados.html" class="btn btn--on-dark btn--lg">Ver resultados</a>
-                  <a href="#sobre" class="btn btn--outline-on-dark btn--lg">A companhia</a>
-                </div>
+                <h1 class="hero__title">Foco na geração de valor para os acionistas e para a sociedade</h1>
               </div>
             </div>
           </article>
@@ -233,13 +227,7 @@
             <div class="hero__overlay"></div>
             <div class="hero__content">
               <div class="hero__inner">
-                <span class="hero__eyebrow">Eventos</span>
-                <h2 class="hero__title">Próxima <em>teleconferência</em> de resultados</h2>
-                <p class="hero__text">Acompanhe ao vivo a apresentação aos analistas e participe da sessão de perguntas e respostas. Inscrições abertas.</p>
-                <div class="hero__actions">
-                  <a href="#" class="btn btn--on-dark btn--lg">Inscrever-se</a>
-                  <a href="#" class="btn btn--outline-on-dark btn--lg">Calendário completo</a>
-                </div>
+                <h2 class="hero__title">Teleconferência de Resultados — acompanhe ao vivo</h2>
               </div>
             </div>
           </article>
@@ -250,12 +238,7 @@
             <div class="hero__overlay"></div>
             <div class="hero__content">
               <div class="hero__inner">
-                <span class="hero__eyebrow">Sustentabilidade</span>
-                <h2 class="hero__title">Relatório <em>ESG</em> 2025</h2>
-                <p class="hero__text">Avanços em governança, agenda climática e impacto social. Confira metas, indicadores e os compromissos para 2030.</p>
-                <div class="hero__actions">
-                  <a href="#" class="btn btn--on-dark btn--lg">Baixar relatório</a>
-                </div>
+                <h2 class="hero__title">Relatório de Sustentabilidade 2025</h2>
               </div>
             </div>
           </article>
@@ -263,11 +246,6 @@
 
         <!-- Controles -->
         <div class="hero__controls">
-          <div class="hero__bullets" role="tablist" aria-label="Selecionar slide" data-hero-bullets>
-            <button class="hero__bullet is-active" type="button" data-hero-bullet="0" role="tab" aria-label="Slide 1" aria-selected="true"></button>
-            <button class="hero__bullet" type="button" data-hero-bullet="1" role="tab" aria-label="Slide 2" aria-selected="false"></button>
-            <button class="hero__bullet" type="button" data-hero-bullet="2" role="tab" aria-label="Slide 3" aria-selected="false"></button>
-          </div>
           <div class="hero__arrows">
             <button class="hero__arrow" type="button" data-hero-prev aria-label="Slide anterior">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
@@ -280,425 +258,328 @@
       </section>
 
       <!-- =======================================================
-           2. SEÇÃO RI — 3 colunas
+           2. TICKER STRIP
            ======================================================= -->
-      <section class="ri-section" id="ri" aria-labelledby="ri-title">
-        <div class="ri-section__inner">
-          <div class="ri-section__head">
-            <span class="eyebrow">Relações com Investidores</span>
-            <h2 id="ri-title">Acesso rápido à informação</h2>
-            <p>Comunicados, resultados e calendário de eventos disponíveis em um só lugar.</p>
+      <div class="ticker-strip" role="region" aria-label="Cotações em tempo real">
+        <div class="ticker-strip__inner">
+          <span class="ticker-strip__item">
+            SMTO3
+            <span class="ticker-strip__price">R$ —</span>
+            <span class="ticker-strip__change">—%</span>
+            <span class="ticker-strip__date">—</span>
+          </span>
+          <span class="ticker-strip__sep" aria-hidden="true">|</span>
+          <span class="ticker-strip__item">
+            IBOV
+            <span class="ticker-strip__price">—</span>
+            <span class="ticker-strip__change">—%</span>
+            <span class="ticker-strip__date">—</span>
+          </span>
+          <span class="ticker-strip__sep" aria-hidden="true">|</span>
+          <span class="ticker-strip__item">
+            IGCX
+            <span class="ticker-strip__price">—</span>
+            <span class="ticker-strip__change">—%</span>
+            <span class="ticker-strip__date">—</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- =======================================================
+           3. HOME HIGHLIGHTS — Central de Resultados + Notícias
+           ======================================================= -->
+      <section class="home-highlights" aria-labelledby="highlights-results-title">
+        <div class="home-highlights__inner">
+
+          <!-- Left: Central de Resultados -->
+          <div class="home-highlights__col">
+            <div class="home-section-heading">
+              <span class="home-section-heading__label">CENTRAL DE</span>
+              <h2 class="home-section-heading__title" id="highlights-results-title">RESULTADOS</h2>
+            </div>
+
+            <div class="home-results">
+              <a href="/central-resultados.html" class="home-results__quarter">
+                4T25
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+
+              <form class="home-results__downloads" id="home-downloads-form">
+                <label class="home-results__item">
+                  <input type="checkbox" name="doc" value="release" />
+                  <span>Resultados 4T25</span>
+                </label>
+                <label class="home-results__item">
+                  <input type="checkbox" name="doc" value="apresentacao" />
+                  <span>Apresentação da Teleconferência 4T25</span>
+                </label>
+                <label class="home-results__item">
+                  <input type="checkbox" name="doc" value="audio" />
+                  <span>Áudio Teleconferência 4T25</span>
+                </label>
+              </form>
+
+              <button type="button" class="btn btn--outline" onclick="document.getElementById('home-downloads-form').querySelectorAll('input:checked').forEach(()=>{})">
+                DOWNLOAD
+              </button>
+            </div>
+
+            <a href="/central-resultados.html" class="home-highlights__more">Ver todos os resultados</a>
           </div>
 
-          <div class="ri-section__grid">
-            <!-- Coluna 1: Últimas atualizações -->
-            <article class="card card--feature">
-              <header class="card__header">
-                <h3 class="card__title">Últimas atualizações</h3>
-                <span class="card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11a9 9 0 0 1 9 9"/><path d="M3 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
-                </span>
-              </header>
+          <!-- Right: Últimas Notícias -->
+          <div class="home-highlights__col">
+            <div class="home-section-heading">
+              <span class="home-section-heading__label">ÚLTIMAS</span>
+              <h2 class="home-section-heading__title" id="highlights-news-title">
+                NOTÍCIAS
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="20" height="20" style="vertical-align:middle;margin-left:8px;color:var(--color-warning)"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+              </h2>
+            </div>
 
-              <ul class="ri-list card__list">
-                <li class="ri-list__item">
-                  <a class="ri-list__link" href="#">
-                    <span class="ri-list__date">15 mai 2025</span>
-                    <span class="ri-list__title">Comunicado ao Mercado — Pagamento de dividendos</span>
-                  </a>
-                </li>
-                <li class="ri-list__item">
-                  <a class="ri-list__link" href="#">
-                    <span class="ri-list__date">02 mai 2025</span>
-                    <span class="ri-list__title">Fato Relevante — Aquisição estratégica</span>
-                  </a>
-                </li>
-                <li class="ri-list__item">
-                  <a class="ri-list__link" href="#">
-                    <span class="ri-list__date">28 abr 2025</span>
-                    <span class="ri-list__title">Ata da Assembleia Geral Ordinária</span>
-                  </a>
-                </li>
-                <li class="ri-list__item">
-                  <a class="ri-list__link" href="#">
-                    <span class="ri-list__date">10 abr 2025</span>
-                    <span class="ri-list__title">Atualização do Formulário de Referência</span>
-                  </a>
-                </li>
-              </ul>
+            <ul class="home-news-list" aria-label="Últimas notícias">
+              <li class="home-news-list__item">
+                <a href="/fatos-relevantes.html" class="home-news-list__link">
+                  <span class="home-news-list__date">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="13" height="13"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    25 de maio de 2026
+                  </span>
+                  <span class="home-news-list__title">Guidance de Produção e Capex para Safra 2026/27</span>
+                </a>
+              </li>
+              <li class="home-news-list__item">
+                <a href="/central-resultados.html" class="home-news-list__link">
+                  <span class="home-news-list__date">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="13" height="13"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    25 de maio de 2026
+                  </span>
+                  <span class="home-news-list__title">Divulgação de Resultados do 4T25</span>
+                </a>
+              </li>
+              <li class="home-news-list__item">
+                <a href="/atas-assembleias.html" class="home-news-list__link">
+                  <span class="home-news-list__date">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="13" height="13"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    20 de maio de 2026
+                  </span>
+                  <span class="home-news-list__title">Edital de Convocação — AGO/E</span>
+                </a>
+              </li>
+              <li class="home-news-list__item">
+                <a href="/fatos-relevantes.html" class="home-news-list__link">
+                  <span class="home-news-list__date">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="13" height="13"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    10 de maio de 2026
+                  </span>
+                  <span class="home-news-list__title">Comunicado ao Mercado — Projeções de Safra 2026/27</span>
+                </a>
+              </li>
+            </ul>
 
-              <a class="card__link" href="#">Ver todas as atualizações</a>
-            </article>
-
-            <!-- Coluna 2: Central de Resultados -->
-            <article class="card card--feature">
-              <header class="card__header">
-                <h3 class="card__title">Últimos Resultados 1T25</h3>
-                <span class="card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-3 4 4 5-5"/></svg>
-                </span>
-              </header>
-
-              <ul class="ri-list card__list">
-                <li class="ri-list__item">
-                  <a class="ri-list__link ri-list__file" href="#">
-                    <span class="file-icon file-icon--inline file-icon--pdf" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
-                    </span>
-                    <span class="ri-list__file-name">Release de Resultados</span>
-                  </a>
-                </li>
-                <li class="ri-list__item">
-                  <a class="ri-list__link ri-list__file" href="#">
-                    <span class="file-icon file-icon--inline file-icon--ppt" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><line x1="12" y1="16" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/><circle cx="12" cy="10" r="2.5"/></svg>
-                    </span>
-                    <span class="ri-list__file-name">Apresentação</span>
-                  </a>
-                </li>
-                <li class="ri-list__item">
-                  <a class="ri-list__link ri-list__file" href="#">
-                    <span class="file-icon file-icon--inline file-icon--xls" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13l2 3 2-3M9 18l2-3 2 3" stroke-width="1.4"/></svg>
-                    </span>
-                    <span class="ri-list__file-name">Planilha de Resultados</span>
-                  </a>
-                </li>
-                <li class="ri-list__item">
-                  <a class="ri-list__link ri-list__file" href="#">
-                    <span class="file-icon file-icon--inline file-icon--audio" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V8l9-4v10"/><circle cx="6" cy="18" r="3"/><circle cx="15" cy="14" r="3"/></svg>
-                    </span>
-                    <span class="ri-list__file-name">Áudio da Teleconferência</span>
-                  </a>
-                </li>
-                <li class="ri-list__item">
-                  <a class="ri-list__link ri-list__file" href="#">
-                    <span class="file-icon file-icon--inline file-icon--video" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M22 8l-6 4 6 4z"/></svg>
-                    </span>
-                    <span class="ri-list__file-name">Vídeo da Teleconferência</span>
-                  </a>
-                </li>
-                <li class="ri-list__item">
-                  <a class="ri-list__link ri-list__file" href="#">
-                    <span class="file-icon file-icon--inline file-icon--pdf" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
-                    </span>
-                    <span class="ri-list__file-name">Demonstrações Financeiras</span>
-                  </a>
-                </li>
-              </ul>
-
-              <a class="card__link" href="/central-resultados.html">Ver todos os resultados</a>
-            </article>
-
-            <!-- Coluna 3: Próximos Eventos -->
-            <article class="card card--feature">
-              <header class="card__header">
-                <h3 class="card__title">Próximos eventos</h3>
-                <span class="card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                </span>
-              </header>
-
-              <ul class="ri-list card__list">
-                <li class="ri-list__item">
-                  <a class="ri-list__link" href="#">
-                    <span class="ri-list__event">
-                      <span class="ri-list__event-date">
-                        <span class="day">14</span>
-                        <span class="month">Ago</span>
-                      </span>
-                      <span class="ri-list__event-body">
-                        <span class="ri-list__event-title">Teleconferência de Resultados 2T25</span>
-                        <span class="ri-list__event-time">10:00 — português · 11:30 — inglês</span>
-                      </span>
-                    </span>
-                  </a>
-                </li>
-                <li class="ri-list__item">
-                  <a class="ri-list__link" href="#">
-                    <span class="ri-list__event">
-                      <span class="ri-list__event-date">
-                        <span class="day">22</span>
-                        <span class="month">Set</span>
-                      </span>
-                      <span class="ri-list__event-body">
-                        <span class="ri-list__event-title">Investor Day 2025</span>
-                        <span class="ri-list__event-time">09:00 às 18:00 — São Paulo, SP</span>
-                      </span>
-                    </span>
-                  </a>
-                </li>
-                <li class="ri-list__item">
-                  <a class="ri-list__link" href="#">
-                    <span class="ri-list__event">
-                      <span class="ri-list__event-date">
-                        <span class="day">10</span>
-                        <span class="month">Out</span>
-                      </span>
-                      <span class="ri-list__event-body">
-                        <span class="ri-list__event-title">Reunião pública APIMEC</span>
-                        <span class="ri-list__event-time">14:00 — formato híbrido</span>
-                      </span>
-                    </span>
-                  </a>
-                </li>
-                <li class="ri-list__item">
-                  <a class="ri-list__link" href="#">
-                    <span class="ri-list__event">
-                      <span class="ri-list__event-date">
-                        <span class="day">12</span>
-                        <span class="month">Nov</span>
-                      </span>
-                      <span class="ri-list__event-body">
-                        <span class="ri-list__event-title">Teleconferência de Resultados 3T25</span>
-                        <span class="ri-list__event-time">10:00 — português · 11:30 — inglês</span>
-                      </span>
-                    </span>
-                  </a>
-                </li>
-              </ul>
-
-              <a class="card__link" href="#">Ver todos os eventos</a>
-            </article>
+            <a href="/fatos-relevantes.html" class="home-highlights__more">Ver todas as notícias</a>
           </div>
+
         </div>
       </section>
 
       <!-- =======================================================
-           3. SOBRE — texto + big numbers
+           4. HOME QUICKLINKS — 4 tiles escuros
            ======================================================= -->
-      <section class="about-section" id="sobre" aria-labelledby="about-title">
-        <div class="about-section__inner">
-          <div class="about-section__intro">
-            <div class="about-section__heading">
-              <span class="eyebrow">A Companhia</span>
-              <h2 id="about-title">Construindo valor de longo prazo</h2>
-            </div>
-            <div class="about-section__text">
-              <p>A São Martinho S.A. é uma das maiores companhias do setor sucroenergético do Brasil, com ações listadas no Novo Mercado da B3 sob o código SMTO3. Com três unidades industriais no estado de São Paulo, produzimos açúcar, etanol e bioenergia com foco em eficiência, inovação e criação de valor de longo prazo.</p>
-              <p>Nossa estratégia combina excelência operacional, gestão disciplinada de capital e governança corporativa robusta — pilares que sustentam o crescimento consistente da companhia ao longo de mais de oito décadas de história.</p>
-            </div>
-          </div>
+      <section class="home-quicklinks" aria-label="Acesso rápido">
+        <div class="home-quicklinks__inner">
 
-          <div class="about-section__numbers">
-            <div class="big-number">
-              <span class="big-number__value"><span data-counter="7">7</span><span class="plus">+</span></span>
-              <span class="big-number__label">mil colaboradores</span>
-            </div>
-            <div class="big-number">
-              <span class="big-number__value"><span data-counter="3">3</span></span>
-              <span class="big-number__label">usinas industriais</span>
-            </div>
-            <div class="big-number">
-              <span class="big-number__value"><span data-counter="22">22</span><span class="plus"> mi</span></span>
-              <span class="big-number__label">ton de cana/safra</span>
-            </div>
-            <div class="big-number">
-              <span class="big-number__value"><span data-counter="88">88</span></span>
-              <span class="big-number__label">anos de história</span>
-            </div>
-          </div>
+          <a href="/central-resultados.html" class="home-quicklinks__item">
+            <svg class="home-quicklinks__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 36 16 24 24 30 34 18 42 24"/><polyline points="34 18 42 18 42 26"/></svg>
+            <span>CENTRAL DE<br>RESULTADOS</span>
+          </a>
+
+          <a href="/planilha-resultados.html" class="home-quicklinks__item">
+            <svg class="home-quicklinks__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="10" width="36" height="28" rx="2"/><line x1="6" y1="18" x2="42" y2="18"/><line x1="6" y1="26" x2="42" y2="26"/><line x1="16" y1="10" x2="16" y2="38"/><line x1="26" y1="10" x2="26" y2="38"/></svg>
+            <span>PLANILHA DE<br>RESULTADOS</span>
+          </a>
+
+          <a href="/fatos-relevantes.html" class="home-quicklinks__item">
+            <svg class="home-quicklinks__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 28l-4 4v4h8v-4"/><path d="M14 22c0-5.523 4.477-10 10-10s10 4.477 10 10"/><path d="M34 28l4 4v4h-8v-4"/><ellipse cx="24" cy="22" rx="10" ry="6"/><line x1="24" y1="16" x2="24" y2="28"/><line x1="18" y1="22" x2="30" y2="22"/></svg>
+            <span>FATOS RELEVANTES E<br>COMUNICADOS</span>
+          </a>
+
+          <a href="/documentos-cvm.html" class="home-quicklinks__item">
+            <svg class="home-quicklinks__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 14h32v26a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V14z"/><path d="M6 8h36v6H6z"/><line x1="16" y1="24" x2="32" y2="24"/><line x1="16" y1="30" x2="28" y2="30"/></svg>
+            <span>DOCUMENTOS ENTREGUES<br>À CVM</span>
+          </a>
+
         </div>
       </section>
 
       <!-- =======================================================
-           4. MAILING
+           5. HOME MEDIA — Vídeo + Calendário
            ======================================================= -->
-      <section class="mailing-section" id="mailing" aria-labelledby="mailing-title">
-        <div class="mailing-section__inner">
-          <div class="mailing-section__copy">
-            <span class="eyebrow">Mailing RI</span>
-            <h2 id="mailing-title">Receba comunicados direto no seu e-mail</h2>
-            <p>Cadastre-se para receber resultados trimestrais, fatos relevantes e convites para eventos com investidores. Você pode cancelar a inscrição a qualquer momento.</p>
+      <section class="home-media">
+        <div class="home-media__inner">
+
+          <!-- Vídeo Institucional -->
+          <div class="home-media__video">
+            <div class="home-section-heading">
+              <span class="home-section-heading__label">VÍDEO</span>
+              <h2 class="home-section-heading__title">INSTITUCIONAL</h2>
+            </div>
+
+            <div class="home-media__video-thumb">
+              <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" alt="São Martinho — vídeo institucional" loading="lazy" />
+              <a href="#" class="home-media__video-play" aria-label="Assistir vídeo institucional">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="32" height="32"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+            </div>
+
+            <a href="#" class="home-highlights__more">Ver todos os vídeos</a>
           </div>
 
-          <form class="mailing-section__form" data-mailing-form novalidate>
-            <div class="mailing-section__form-row">
-              <label class="field">
-                <span class="field__label">Nome</span>
-                <input class="field__input" type="text" name="name" placeholder="Seu nome completo" required />
-              </label>
-              <label class="field">
-                <span class="field__label">E-mail</span>
-                <input class="field__input" type="email" name="email" placeholder="voce@empresa.com" required />
-              </label>
+          <!-- Calendário de Eventos -->
+          <div class="home-media__calendar">
+            <div class="home-section-heading">
+              <span class="home-section-heading__label">CALENDÁRIO DE</span>
+              <h2 class="home-section-heading__title">EVENTOS</h2>
             </div>
-            <label class="field">
-              <span class="field__label">Empresa <small style="opacity:.7">· opcional</small></span>
-              <input class="field__input" type="text" name="company" placeholder="Nome da instituição" />
-            </label>
-            <div class="mailing-section__form-actions">
-              <button type="submit" class="btn btn--on-dark btn--lg" style="width:100%">Quero me cadastrar</button>
-            </div>
-            <p class="mailing-section__form-disclaimer">
-              Ao se cadastrar você concorda com nossa Política de Privacidade. Tratamos seus dados conforme a LGPD.
-            </p>
-          </form>
+
+            <ul class="home-events-list" aria-label="Próximos eventos">
+              <li class="home-events-list__item">
+                <span class="home-events-list__date">
+                  <span class="day">10</span>
+                  <span class="month">AGO</span>
+                </span>
+                <span class="home-events-list__title">Divulgação de Resultados 1T26</span>
+                <span class="home-events-list__actions">
+                  <a href="#" aria-label="Adicionar ao Outlook"><img src="/assets/Icones/icon-outlook.png" alt="Outlook" width="20" height="20" /></a>
+                  <a href="#" aria-label="Adicionar ao Gmail"><img src="/assets/Icones/icon-gmail.png" alt="Gmail" width="20" height="20" /></a>
+                </span>
+              </li>
+              <li class="home-events-list__item">
+                <span class="home-events-list__date">
+                  <span class="day">11</span>
+                  <span class="month">AGO</span>
+                </span>
+                <span class="home-events-list__title">Teleconferência de Resultados 1T26</span>
+                <span class="home-events-list__actions">
+                  <a href="#" aria-label="Adicionar ao Outlook"><img src="/assets/Icones/icon-outlook.png" alt="Outlook" width="20" height="20" /></a>
+                  <a href="#" aria-label="Adicionar ao Gmail"><img src="/assets/Icones/icon-gmail.png" alt="Gmail" width="20" height="20" /></a>
+                </span>
+              </li>
+              <li class="home-events-list__item">
+                <span class="home-events-list__date">
+                  <span class="day">09</span>
+                  <span class="month">NOV</span>
+                </span>
+                <span class="home-events-list__title">Divulgação de Resultados 2T26</span>
+                <span class="home-events-list__actions">
+                  <a href="#" aria-label="Adicionar ao Outlook"><img src="/assets/Icones/icon-outlook.png" alt="Outlook" width="20" height="20" /></a>
+                  <a href="#" aria-label="Adicionar ao Gmail"><img src="/assets/Icones/icon-gmail.png" alt="Gmail" width="20" height="20" /></a>
+                </span>
+              </li>
+              <li class="home-events-list__item">
+                <span class="home-events-list__date">
+                  <span class="day">10</span>
+                  <span class="month">NOV</span>
+                </span>
+                <span class="home-events-list__title">Teleconferência de Resultados 2T26</span>
+                <span class="home-events-list__actions">
+                  <a href="#" aria-label="Adicionar ao Outlook"><img src="/assets/Icones/icon-outlook.png" alt="Outlook" width="20" height="20" /></a>
+                  <a href="#" aria-label="Adicionar ao Gmail"><img src="/assets/Icones/icon-gmail.png" alt="Gmail" width="20" height="20" /></a>
+                </span>
+              </li>
+            </ul>
+
+            <a href="/calendario-eventos.html" class="home-highlights__more">Ver todos os eventos</a>
+          </div>
+
         </div>
       </section>
 
       <!-- =======================================================
-           5. CONTATO
+           6. HOME CONTACT STRIP — Fale com RI + Alertas RI
            ======================================================= -->
-      <section class="contact-section" id="contato" aria-labelledby="contact-title">
-        <div class="contact-section__inner">
-          <div class="contact-section__intro">
-            <span class="eyebrow">Fale com o RI</span>
-            <h2 id="contact-title">Entre em contato</h2>
-            <p>Nossa equipe está disponível para esclarecer dúvidas sobre a companhia, resultados, governança e oportunidades de investimento.</p>
+      <section class="home-contact-strip" aria-label="Contato e alertas">
+        <div class="home-contact-strip__inner">
 
-            <div class="contact-section__info">
-              <div class="contact-section__info-item">
-                <span class="contact-section__info-item-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                </span>
-                <div class="contact-section__info-item-content">
-                  <strong>E-mail</strong>
-                  <a href="mailto:ri@saomartinho.com.br">ri@saomartinho.com.br</a>
-                </div>
-              </div>
-
-              <div class="contact-section__info-item">
-                <span class="contact-section__info-item-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                </span>
-                <div class="contact-section__info-item-content">
-                  <strong>Telefone</strong>
-                  <a href="tel:+551130000000">+55 (11) 3000-0000</a>
-                </div>
-              </div>
-
-              <div class="contact-section__info-item">
-                <span class="contact-section__info-item-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </span>
-                <div class="contact-section__info-item-content">
-                  <strong>Endereço</strong>
-                  <span>Av. Brigadeiro Faria Lima, 2.277 — 17º andar<br />São Paulo · SP · 01452-000</span>
-                </div>
+          <!-- Fale com RI -->
+          <div class="home-contact-strip__fale">
+            <div class="home-contact-strip__fale-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="home-contact-strip__fale-body">
+              <h3 class="home-contact-strip__title">FALE COM RI</h3>
+              <p class="home-contact-strip__desc">Tire suas dúvidas ou envie suas sugestões</p>
+              <div class="home-contact-strip__info">
+                <span>E-mail: <a href="mailto:ri@saomartinho.com.br">ri@saomartinho.com.br</a></span>
+                <span>Tel: <a href="tel:+551121054100">(11) 2105-4100</a></span>
               </div>
             </div>
           </div>
 
-          <form class="contact-section__form" data-contact-form novalidate>
-            <div class="contact-section__form-row">
-              <label class="field">
-                <span class="field__label">Nome</span>
-                <input class="field__input" type="text" name="name" placeholder="Seu nome completo" required />
-              </label>
-              <label class="field">
-                <span class="field__label">E-mail</span>
-                <input class="field__input" type="email" name="email" placeholder="voce@empresa.com" required />
-              </label>
+          <div class="home-contact-strip__divider" aria-hidden="true"></div>
+
+          <!-- Alertas RI -->
+          <div class="home-contact-strip__alertas">
+            <div class="home-contact-strip__alertas-header">
+              <h3 class="home-contact-strip__title">ALERTAS RI</h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="28" height="28"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
+            <p class="home-contact-strip__desc">Cadastre-se agora para receber nossos alertas por e-mail</p>
+            <form class="home-contact-strip__form" data-mailing-form novalidate>
+              <div class="home-contact-strip__form-row">
+                <label class="sr-only" for="alertas-email">E-mail</label>
+                <input id="alertas-email" class="home-contact-strip__input" type="email" name="email" placeholder="Digite seu e-mail" required />
+                <button type="submit" class="btn btn--primary">Cadastrar</button>
+              </div>
+            </form>
+          </div>
 
-            <label class="field">
-              <span class="field__label">Assunto</span>
-              <input class="field__input" type="text" name="subject" placeholder="Sobre o que você quer falar?" required />
-            </label>
-
-            <label class="field">
-              <span class="field__label">Mensagem</span>
-              <textarea class="field__textarea" name="message" placeholder="Conte mais detalhes…" rows="5" required></textarea>
-            </label>
-
-            <div class="contact-section__form-actions">
-              <button type="submit" class="btn btn--secondary btn--lg">Enviar mensagem</button>
-            </div>
-          </form>
         </div>
       </section>
     </main>
 
     <!-- =======================================================
-         6. FOOTER
+         7. FOOTER MÍNIMO
          ======================================================= -->
-    <footer class="site-footer">
-      <div class="site-footer__inner">
+    <footer class="site-footer-min">
+      <div class="site-footer-min__inner">
 
-        <!-- Logo -->
-        <div class="site-footer__top">
-          <img src="/assets/logotipo/logo-footer.svg" alt="São Martinho S.A." class="site-footer__logo" />
-        </div>
-
-        <div class="site-footer__grid">
-          <!-- Coluna A Companhia -->
-          <div class="site-footer__block">
-            <h4>A Companhia</h4>
-            <ul>
-              <li><a href="/visao-geral.html">Visão Institucional</a></li>
-              <li><a href="/estrategias-vantagens.html">Por que investir na São Martinho</a></li>
-            </ul>
-          </div>
-
-          <!-- Coluna Governança -->
-          <div class="site-footer__block">
-            <h4>Governança Corporativa</h4>
-            <ul>
-              <li><a href="/novo-mercado.html">Novo Mercado</a></li>
-              <li><a href="/composicao-acionaria.html">Composição Acionária</a></li>
-              <li><a href="/diretoria-conselho.html">Órgãos e Comitês</a></li>
-              <li><a href="/atas-assembleias.html">Atas e Assembleias</a></li>
-              <li><a href="/codigo-conduta.html">Ética &amp; Conformidade</a></li>
-              <li><a href="/dividendos-recompra.html">Dividendos e JCP</a></li>
-            </ul>
-          </div>
-
-          <!-- Coluna Informações aos Investidores -->
-          <div class="site-footer__block">
-            <h4>Informações aos Investidores</h4>
-            <ul>
-              <li><a href="/central-resultados.html">Central de Resultados</a></li>
-              <li><a href="/documentos-cvm.html">Documentos CVM</a></li>
-              <li><a href="/fatos-relevantes.html">Fatos Relevantes</a></li>
-              <li><a href="/apresentacoes.html">Apresentações</a></li>
-              <li><a href="/sustentabilidade.html">Sustentabilidade</a></li>
-            </ul>
-          </div>
-
-          <!-- Coluna Outras Informações -->
-          <div class="site-footer__block">
-            <h4>Outras Informações</h4>
-            <ul>
-              <li><a href="/calendario-eventos.html">Calendário de Eventos</a></li>
-              <li><a href="/mailing.html">Alertas RI</a></li>
-              <li><a href="/fale-com-ri.html">Fale com RI</a></li>
-            </ul>
+        <!-- Brand: logo symbol + ticker badge -->
+        <div class="site-footer-min__brand">
+          <img src="/assets/logotipo/logo-footer.svg" alt="São Martinho S.A." class="site-footer-min__logo" />
+          <div class="site-footer-min__ticker-badge">
+            <span class="site-footer-min__ticker-symbol">SMTO3</span>
+            <span class="site-footer-min__ticker-label">B3 LISTED NM</span>
           </div>
         </div>
 
-        <div class="site-footer__bottom">
-          <div class="site-footer__bottom-row site-footer__bottom-row--spread">
-            <div class="site-footer__bottom-links">
-              <a href="#">Termos e Condições</a>
-              <a href="#">Política de Privacidade</a>
-              <a href="#">Definições de Cookies</a>
-              <a href="#">Sitemap</a>
-            </div>
-            <div class="site-footer__social">
-              <span>Siga a São Martinho:</span>
-              <a href="#" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-              </a>
-              <a href="#" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              </a>
-              <a href="#" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-              </a>
-            </div>
+        <!-- Legal -->
+        <div class="site-footer-min__legal">
+          <div class="site-footer-min__links">
+            <a href="/politica-de-privacidade.html">Política de Privacidade</a>
+            <span aria-hidden="true">|</span>
+            <a href="/termos-e-condicoes.html">Condições de uso</a>
           </div>
-          <div class="site-footer__bottom-row site-footer__bottom-row--spread">
-            <span>©Copyright São Martinho S.A. 2026. Todos os direitos reservados.</span>
-            <a href="https://saomartinho.com.br" class="site-footer__powered" target="_blank" rel="noopener" aria-label="São Martinho S.A.">
-              <span>Powered by</span>
-              <img src="/assets/logotipo/logo-footer.svg" alt="São Martinho S.A." />
+          <span class="site-footer-min__copy">SÃO MARTINHO © 2026</span>
+        </div>
+
+        <!-- Social + Powered by -->
+        <div class="site-footer-min__social">
+          <div class="site-footer-min__social-icons">
+            <a href="#" aria-label="Facebook" class="site-footer-min__social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="site-footer-min__social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="site-footer-min__social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
             </a>
           </div>
+          <a href="https://astri.solutions" class="site-footer-min__powered" target="_blank" rel="noopener">
+            Powered by <strong>Astri</strong>
+          </a>
         </div>
+
       </div>
     </footer>
 
