@@ -119,8 +119,8 @@ $color-tertiary-pressed: $color-tertiary-light-900;
 $color-tertiary-subtle:  $color-tertiary-light-100;
 
 // Texto sobre cor (on-color text)
-$color-on-primary:   #ffffff;   // branco — contraste 6.0:1 sobre #2EA24F
-$color-on-secondary: #ffffff;   // branco — contraste 11.3:1 sobre #2E5179
+$color-on-primary:   #ffffff;   // branco — contraste 3.3:1 sobre #2EA24F (passa para texto grande/botões)
+$color-on-secondary: #ffffff;   // branco — contraste 8.2:1 sobre #2E5179 ✓ AAA
 $color-on-tertiary:  $color-gray-light-900;  // escuro sobre cinza claro
 
 // Semânticas base

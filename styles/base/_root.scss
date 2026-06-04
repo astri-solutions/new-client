@@ -24,38 +24,38 @@
   // 1. PALETA
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  // Primary — verde
-  --color-primary-100: #{$color-primary-light-100};  // #66F5A2
-  --color-primary-200: #{$color-primary-light-200};  // #4DEF93
-  --color-primary-300: #{$color-primary-light-300};  // #33E883
-  --color-primary-400: #{$color-primary-light-400};  // #1AE174
-  --color-primary-500: #{$color-primary-light-500};  // #00D865
-  --color-primary-600: #{$color-primary-light-600};  // #00C75A
-  --color-primary-700: #{$color-primary-light-700};  // #00B54F
-  --color-primary-800: #{$color-primary-light-800};  // #00A344
-  --color-primary-900: #{$color-primary-light-900};  // #008F39
+  // Primary — verde São Martinho
+  --color-primary-100: #{$color-primary-light-100};  // #EEF7F1
+  --color-primary-200: #{$color-primary-light-200};  // #D5ECDC
+  --color-primary-300: #{$color-primary-light-300};  // #B6DEC1
+  --color-primary-400: #{$color-primary-light-400};  // #8CCC9E
+  --color-primary-500: #{$color-primary-light-500};  // #2EA24F
+  --color-primary-600: #{$color-primary-light-600};  // #25823F
+  --color-primary-700: #{$color-primary-light-700};  // #1E6933
+  --color-primary-800: #{$color-primary-light-800};  // #175128
+  --color-primary-900: #{$color-primary-light-900};  // #10391C
 
-  // Secondary — teal
-  --color-secondary-100: #{$color-secondary-light-100};  // #99C7D0
-  --color-secondary-200: #{$color-secondary-light-200};  // #73AFBA
-  --color-secondary-300: #{$color-secondary-light-300};  // #4D95A1
-  --color-secondary-400: #{$color-secondary-light-400};  // #297986
-  --color-secondary-500: #{$color-secondary-light-500};  // #0B5B68
-  --color-secondary-600: #{$color-secondary-light-600};  // #025562
-  --color-secondary-700: #{$color-secondary-light-700};  // #004E5B
-  --color-secondary-800: #{$color-secondary-light-800};  // #004551
-  --color-secondary-900: #{$color-secondary-light-900};  // #003B45
+  // Secondary — azul marinho São Martinho
+  --color-secondary-100: #{$color-secondary-light-100};  // #EEF1F4
+  --color-secondary-200: #{$color-secondary-light-200};  // #D5DCE4
+  --color-secondary-300: #{$color-secondary-light-300};  // #B6C2D0
+  --color-secondary-400: #{$color-secondary-light-400};  // #8C9FB5
+  --color-secondary-500: #{$color-secondary-light-500};  // #2E5179
+  --color-secondary-600: #{$color-secondary-light-600};  // #254161
+  --color-secondary-700: #{$color-secondary-light-700};  // #1E354F
+  --color-secondary-800: #{$color-secondary-light-800};  // #17293D
+  --color-secondary-900: #{$color-secondary-light-900};  // #101C2A
 
-  // Tertiary — cinza quente
-  --color-tertiary-100: #{$color-tertiary-light-100};  // #F9F9F4
-  --color-tertiary-200: #{$color-tertiary-light-200};  // #F6F6F0
-  --color-tertiary-300: #{$color-tertiary-light-300};  // #F3F3ED
-  --color-tertiary-400: #{$color-tertiary-light-400};  // #F0F0E9
-  --color-tertiary-500: #{$color-tertiary-light-500};  // #EDEDE6
-  --color-tertiary-600: #{$color-tertiary-light-600};  // #D0D0C9
-  --color-tertiary-700: #{$color-tertiary-light-700};  // #B3B3AC
-  --color-tertiary-800: #{$color-tertiary-light-800};  // #95958F
-  --color-tertiary-900: #{$color-tertiary-light-900};  // #787872
+  // Tertiary — cinza claro São Martinho
+  --color-tertiary-100: #{$color-tertiary-light-100};  // #FEFEFE
+  --color-tertiary-200: #{$color-tertiary-light-200};  // #FAFAFA
+  --color-tertiary-300: #{$color-tertiary-light-300};  // #F7F7F7
+  --color-tertiary-400: #{$color-tertiary-light-400};  // #F5F5F5
+  --color-tertiary-500: #{$color-tertiary-light-500};  // #F2F2F2
+  --color-tertiary-600: #{$color-tertiary-light-600};  // #C2C2C2
+  --color-tertiary-700: #{$color-tertiary-light-700};  // #9D9D9D
+  --color-tertiary-800: #{$color-tertiary-light-800};  // #797979
+  --color-tertiary-900: #{$color-tertiary-light-900};  // #555555
 
   // Grayscale
   --color-gray-0:   #{$color-gray-light-0};    // #FFFFFF
@@ -75,29 +75,29 @@
   // 2. ESTADOS
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  // Primary — verde
-  // Contraste texto: preto (#000) sobre 500 = 10.9:1 ✓ AAA
-  --color-primary:         var(--color-primary-500);  // default  #00D865
-  --color-primary-hover:   var(--color-primary-700);  // hover    #00B54F
-  --color-primary-pressed: var(--color-primary-900);  // pressed  #008F39
-  --color-primary-subtle:  var(--color-primary-100);  // bg sutil #66F5A2
-  --color-on-primary:      #000000;                   // texto sobre primary
+  // Primary — verde São Martinho
+  // Contraste branco sobre 500: 3.3:1 (passa para texto grande e UI components)
+  --color-primary:         var(--color-primary-500);   // #2EA24F
+  --color-primary-hover:   var(--color-primary-700);   // #1E6933
+  --color-primary-pressed: var(--color-primary-900);   // #10391C
+  --color-primary-subtle:  var(--color-primary-100);   // #EEF7F1
+  --color-on-primary:      #{$color-on-primary};       // #ffffff
 
-  // Secondary — teal
-  // Contraste texto: branco (#fff) sobre 500 = 7.6:1 ✓ AAA
-  --color-secondary:         var(--color-secondary-500);  // default  #0B5B68
-  --color-secondary-hover:   var(--color-secondary-700);  // hover    #004E5B
-  --color-secondary-pressed: var(--color-secondary-900);  // pressed  #003B45
-  --color-secondary-subtle:  var(--color-secondary-100);  // bg sutil #99C7D0
-  --color-on-secondary:      #ffffff;                     // texto sobre secondary
+  // Secondary — azul marinho São Martinho
+  // Contraste branco sobre 500: 8.2:1 ✓ AAA
+  --color-secondary:         var(--color-secondary-500);  // #2E5179
+  --color-secondary-hover:   var(--color-secondary-700);  // #1E354F
+  --color-secondary-pressed: var(--color-secondary-900);  // #101C2A
+  --color-secondary-subtle:  var(--color-secondary-100);  // #EEF1F4
+  --color-on-secondary:      #{$color-on-secondary};      // #ffffff
 
-  // Tertiary — cinza quente
-  // Contraste texto: gray-900 (#262626) sobre 500 = 9.1:1 ✓ AAA
-  --color-tertiary:         var(--color-tertiary-500);  // default  #EDEDE6
-  --color-tertiary-hover:   var(--color-tertiary-700);  // hover    #B3B3AC
-  --color-tertiary-pressed: var(--color-tertiary-900);  // pressed  #787872
-  --color-tertiary-subtle:  var(--color-tertiary-100);  // bg sutil #F9F9F4
-  --color-on-tertiary:      var(--color-gray-900);      // texto sobre tertiary
+  // Tertiary — cinza claro São Martinho
+  // Contraste gray-900 (#262626) sobre 500: ✓ AAA
+  --color-tertiary:         var(--color-tertiary-500);  // #F2F2F2
+  --color-tertiary-hover:   var(--color-tertiary-700);  // #9D9D9D
+  --color-tertiary-pressed: var(--color-tertiary-900);  // #555555
+  --color-tertiary-subtle:  var(--color-tertiary-100);  // #FEFEFE
+  --color-on-tertiary:      var(--color-gray-900);      // #262626
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // 3. SEMÂNTICOS
@@ -105,7 +105,7 @@
 
   // — Superfícies
   --color-bg:      var(--color-gray-0);         // #FFFFFF — fundo da página
-  --color-surface: var(--color-tertiary-100);   // #F9F9F4 — cards, painéis
+  --color-surface: var(--color-tertiary-100);   // #FEFEFE — cards, painéis
   --color-border:  var(--color-gray-300);       // #DADADA
   --color-divider: var(--color-gray-200);       // #E5E5E5
 
@@ -116,27 +116,27 @@
 
   // — Sections (background de seções)
   --color-section-bg:       var(--color-bg);               // branco — padrão
-  --color-section-bg-alt:   var(--color-tertiary-100);     // #F9F9F4 — alternado
-  --color-section-bg-brand: var(--color-secondary-700);    // #004E5B — teal escuro
+  --color-section-bg-alt:   var(--color-tertiary-500);     // #F2F2F2 — alternado
+  --color-section-bg-brand: var(--color-secondary-700);    // #1E354F — azul escuro
   --color-section-bg-dark:  var(--color-gray-900);         // #262626 — seção escura
 
   // — Títulos / headings
-  --color-title:          var(--color-secondary-700);  // #004E5B — padrão (teal)
+  --color-title:          var(--color-secondary-700);  // #1E354F — azul marinho escuro
   --color-heading:        var(--color-secondary-700);  // alias de --color-title
-  --color-title-accent:   var(--color-primary-700);    // #00B54F — destaque (verde)
+  --color-title-accent:   var(--color-primary-500);    // #2EA24F — verde destaque
   --color-title-on-dark:  #ffffff;                     // sobre bg escuro
-  --color-title-on-brand: #ffffff;                     // sobre bg teal/brand
+  --color-title-on-brand: #ffffff;                     // sobre bg azul/brand
 
   // — Links e interações
-  --color-link:       var(--color-secondary-600);  // #025562
-  --color-link-hover: var(--color-secondary-400);  // #297986
-  --color-focus-ring: var(--color-secondary-500);  // #0B5B68
+  --color-link:       var(--color-secondary-500);  // #2E5179
+  --color-link-hover: var(--color-secondary-700);  // #1E354F
+  --color-focus-ring: var(--color-primary-500);    // #2EA24F
 
   // — Feedback
-  --color-success: var(--color-primary-600);   // #00C75A
+  --color-success: var(--color-primary-600);   // #25823F
   --color-danger:  #D92D20;
   --color-warning: #F79009;
-  --color-info:    var(--color-secondary-500); // #0B5B68
+  --color-info:    var(--color-secondary-500); // #2E5179
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // TYPOGRAPHY / TOKENS (não mudam com o tema)
@@ -207,7 +207,6 @@
   --color-gray-950: #{$color-gray-dark-950};  // #FFFFFF
 
   // Superfícies dark
-  // Tertiary dark ainda é claro — substituir por tons escuros do grayscale
   --color-bg:      var(--color-gray-0);    // #141414
   --color-surface: var(--color-gray-50);  // #262626
   --color-border:  #2E2E2E;
@@ -223,8 +222,8 @@
   --color-section-bg-alt: var(--color-gray-50);      // #262626 — alternado escuro
   // section-bg-brand e section-bg-dark herdam da paleta remapeada
 
-  // Títulos dark — usar cinza claro ao invés do teal escuro
+  // Títulos dark — usar cinza claro ao invés do azul escuro
   --color-title:        var(--color-gray-900);        // #FAFAFA
   --color-heading:      var(--color-gray-900);        // alias de --color-title
-  --color-title-accent: var(--color-primary-300);     // #40F68A — verde mais claro
+  --color-title-accent: var(--color-primary-400);     // #50BB89 — verde mais claro
 }
