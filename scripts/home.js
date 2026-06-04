@@ -186,7 +186,7 @@ function initForms() {
       banner.dataset.formFeedback = 'true';
       banner.style.cssText = `
         padding: 12px 16px; border-radius: 8px;
-        background-color: rgba(0, 216, 101, 0.12);
+        background-color: rgba(46, 162, 79, 0.12);
         color: var(--color-primary-700);
         font-size: 14px; font-weight: 600;
         margin-top: 12px;
