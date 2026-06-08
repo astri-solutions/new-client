@@ -584,6 +584,55 @@
 .site-footer-min {
   background-color: var(--color-secondary-900);
   color: rgba(255,255,255,0.7);
+
+  &__nav-wrap {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-block: $spacing-10 $spacing-8;
+  }
+
+  &__nav-inner {
+    @include container;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-8;
+
+    @include respond-down(desktop) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-down(tablet) {
+      grid-template-columns: 1fr;
+      gap: $spacing-6;
+    }
+  }
+
+  &__nav-col { display: flex; flex-direction: column; gap: $spacing-3; }
+
+  &__nav-title {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    letter-spacing: $letter-spacing-wider;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: $spacing-1;
+  }
+
+  &__nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2;
+
+    a {
+      font-size: $font-size-sm;
+      color: rgba(255,255,255,0.55);
+      transition: color $transition-fast;
+      &:hover { color: #fff; }
+    }
+  }
+
   padding-block: $spacing-6;
 
   &__inner {
