@@ -5,6 +5,28 @@ import './reveal.js';
 import './accordion.js';
 
 // =============================================================================
+// INVEST TABS — Por que investir na São Martinho
+// =============================================================================
+
+const investTabsEl = document.querySelector('[data-invest-tabs]');
+if (investTabsEl) {
+  const tabs = Array.from(investTabsEl.querySelectorAll('[data-invest-tab]'));
+  const panels = Array.from(investTabsEl.querySelectorAll('[role="tabpanel"]'));
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.investTab;
+      tabs.forEach((t) => { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });
+      panels.forEach((p) => { p.hidden = true; });
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+      const panel = investTabsEl.querySelector(`#tab-panel-${target}`);
+      if (panel) panel.hidden = false;
+    });
+  });
+}
+
+// =============================================================================
 // FORMULÁRIO — Fale com RI
 // =============================================================================
 
