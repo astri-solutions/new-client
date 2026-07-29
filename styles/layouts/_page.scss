@@ -169,9 +169,9 @@
     position: relative;
     overflow: hidden;
     // Máscara SVG: canto top-left e bottom-left arredondados, borda esquerda levemente côncava
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M 12 0 L 100 0 L 100 100 L 2 100 Q 0 100 0 98 C 1 78 10 2 12 0 Z' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M 20 0 L 100 0 L 100 100 L 6 100 Q 0 100 0 88 C 4 68 14 22 20 0 Z' fill='black'/%3E%3C/svg%3E");
     -webkit-mask-size: 100% 100%;
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M 12 0 L 100 0 L 100 100 L 2 100 Q 0 100 0 98 C 1 78 10 2 12 0 Z' fill='black'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M 20 0 L 100 0 L 100 100 L 6 100 Q 0 100 0 88 C 4 68 14 22 20 0 Z' fill='black'/%3E%3C/svg%3E");
     mask-size: 100% 100%;
   }
 
