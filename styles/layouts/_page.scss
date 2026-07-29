@@ -102,14 +102,15 @@
   background: var(--color-bg);
   overflow: hidden;
 
-  // Linha bicolor na base: verde (esq) + navy (dir)
+  // Linha fina na base: verde (esq) + navy (dir) — sobrepõe a imagem
   &::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 3px;
+    height: 2px;
+    z-index: 1;
     background: linear-gradient(
       to right,
       var(--color-primary-500) 58%,
@@ -121,7 +122,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-block: $spacing-12;
+    padding-block: $spacing-8;
     // Alinha com a margem do container (~10vw) até o máximo de 168px (10% de 1680px)
     padding-left: clamp($spacing-6, 10vw, 168px);
     padding-right: $spacing-10;
@@ -130,7 +131,7 @@
   &__title {
     font-family: var(--font-family-display);
     font-size: clamp(1.75rem, 2.5vw, 2.5rem);
-    font-weight: $font-weight-semibold;
+    font-weight: $font-weight-light;
     color: var(--color-secondary-600);
     line-height: $line-height-tight;
     margin-bottom: $spacing-3;
@@ -142,6 +143,7 @@
     flex-wrap: wrap;
     gap: 0;
     font-size: $font-size-sm;
+    font-weight: $font-weight-regular;
     color: var(--color-text-muted);
 
     li {
@@ -152,11 +154,6 @@
         content: '>';
         margin-inline: $spacing-2;
         opacity: 0.45;
-      }
-
-      &[aria-current='page'] {
-        font-weight: $font-weight-semibold;
-        color: var(--color-text);
       }
     }
 
@@ -170,8 +167,11 @@
   &__image-wrap {
     position: relative;
     overflow: hidden;
-    // Recorte diagonal: borda esquerda inclinada ~12%
-    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+    // Máscara SVG: canto top-left e bottom-left arredondados, borda esquerda levemente côncava
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M 15 0 L 100 0 L 100 100 L 4 100 Q 0 100 0 94 C 1 72 14 0 15 0 Z' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-size: 100% 100%;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M 15 0 L 100 0 L 100 100 L 4 100 Q 0 100 0 94 C 1 72 14 0 15 0 Z' fill='black'/%3E%3C/svg%3E");
+    mask-size: 100% 100%;
   }
 
   &__image {
