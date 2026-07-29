@@ -92,7 +92,108 @@
   }
 }
 
-// ---- Section principal de conteúdo
+// ---- Header split — layout 2 colunas: texto branco esq + foto recortada dir
+// Usado nas páginas internas de subseção (ex: Visão Institucional).
+.page-header-split {
+  display: grid;
+  grid-template-columns: 1fr 42%;
+  min-height: 200px;
+  position: relative;
+  background: var(--color-bg);
+  overflow: hidden;
+
+  // Linha bicolor na base: verde (esq) + navy (dir)
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+      to right,
+      var(--color-primary-500) 58%,
+      var(--color-secondary-500) 58%
+    );
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: $spacing-12;
+    // Alinha com a margem do container (~10vw) até o máximo de 168px (10% de 1680px)
+    padding-left: clamp($spacing-6, 10vw, 168px);
+    padding-right: $spacing-10;
+  }
+
+  &__title {
+    font-family: var(--font-family-display);
+    font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+    font-weight: $font-weight-semibold;
+    color: var(--color-secondary-600);
+    line-height: $line-height-tight;
+    margin-bottom: $spacing-3;
+  }
+
+  &__breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    font-size: $font-size-sm;
+    color: var(--color-text-muted);
+
+    li {
+      display: inline-flex;
+      align-items: center;
+
+      &:not(:last-child)::after {
+        content: '>';
+        margin-inline: $spacing-2;
+        opacity: 0.45;
+      }
+
+      &[aria-current='page'] {
+        font-weight: $font-weight-semibold;
+        color: var(--color-text);
+      }
+    }
+
+    a {
+      color: inherit;
+      transition: color $transition-fast;
+      &:hover { color: var(--color-secondary-500); }
+    }
+  }
+
+  &__image-wrap {
+    position: relative;
+    overflow: hidden;
+    // Recorte diagonal: borda esquerda inclinada ~12%
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @include respond-down(tablet) {
+    grid-template-columns: 1fr;
+
+    &__image-wrap { display: none; }
+    &__text { padding-inline: 5%; }
+
+    &::after {
+      background: var(--color-primary-500); // só verde no mobile
+    }
+  }
+}
+
+
 // Usa padding (não margin) para que o background-color da seção cubra o espaço
 // vertical corretamente sem deixar o conteúdo colado nas bordas.
 .page-section {
