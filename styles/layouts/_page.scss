@@ -97,11 +97,9 @@
 .page-header-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 200px;
-  max-height: 350px;
+  height: 350px;
   position: relative;
   background: var(--color-bg);
-  overflow: hidden;
 
   // Linha fina na base: verde (esq) + navy (dir) — sobrepõe a imagem
   &::after {
@@ -184,6 +182,8 @@
 
   @include respond-down(tablet) {
     grid-template-columns: 1fr;
+    height: auto;
+    min-height: 160px;
 
     &__image-wrap { display: none; }
     &__text { padding-inline: 5%; }
