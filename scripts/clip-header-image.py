@@ -60,8 +60,6 @@ def clip_image(src_path: str, out_path: str, width: int = 1440, height: int = 70
     polygon.append(s(20, 0))          # M 20 0
     polygon.append(s(100, 0))         # L 100 0
     polygon.append(s(100, 100))       # L 100 100
-    polygon.append(s(2, 100))          # L 2 100  - bottom-left fino
-    # Q 0 100  0 97  - canto bottom-left quase pontudo (2% wide, 3% tall)
-    polygon += quad_bezier(s(2, 100), s(0, 100), s(0, 97))
-    # C 3 76  14 24  20 0  - borda esquerda ate o topo
-    polygon += cubic_bezier(s(0, 97), s(3, 76), s(14, 24), s(20, 0))
+    polygon.append(s(0, 100))          # L 0 100 - bottom-left pontudo (sem arredondamento)
+    # C 3 76  14 24  20 0 - borda esquerda diagonal
+    polygon += cubic_bezier(s(0, 100), s(3, 76), s(14, 24), s(20, 0))
