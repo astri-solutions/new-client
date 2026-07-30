@@ -60,26 +60,8 @@ def clip_image(src_path: str, out_path: str, width: int = 1440, height: int = 70
     polygon.append(s(20, 0))          # M 20 0
     polygon.append(s(100, 0))         # L 100 0
     polygon.append(s(100, 100))       # L 100 100
-    polygon.append(s(6, 100))         # L 6 100
-    # Q 0 100  0 88  — canto bottom-left arredondado (esticado)
-    polygon += quad_bezier(s(6, 100), s(0, 100), s(0, 88))
-    # C 4 68  14 22  20 0  — borda esquerda quase reta até o topo
-    polygon += cubic_bezier(s(0, 88), s(4, 68), s(14, 22), s(20, 0))
-
-    mask = Image.new("L", (width, height), 0)
-    draw = ImageDraw.Draw(mask)
-    draw.polygon(polygon, fill=255)
-
-    img.putalpha(mask)
-    img.save(out_path, "PNG", optimize=True)
-
-    import os
-    kb = os.path.getsize(out_path) // 1024
-    print(f"✓ {out_path}  ({width}×{height}px, {kb} KB)")
-
-
-if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print(__doc__)
-        sys.exit(1)
-    clip_image(sys.argv[1], sys.argv[2])
+    polygon.append(s(2, 100))          # L 2 100  - bottom-left fino
+    # Q 0 100  0 97  - canto bottom-left quase pontudo (2% wide, 3% tall)
+    polygon += quad_bezier(s(2, 100), s(0, 100), s(0, 97))
+    # C 3 76  14 24  20 0  - borda esquerda ate o topo
+    polygon += cubic_bezier(s(0, 97), s(3, 76), s(14, 24), s(20, 0))
