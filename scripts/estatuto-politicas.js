@@ -1,5 +1,5 @@
 // =============================================================================
-// ESTATUTO, POLÍTICAS E REGIMENTOS
+// DOCUMENTOS CVM
 // =============================================================================
 import './topbar.js';
 import './nav.js';
@@ -10,40 +10,19 @@ import { initAccordion } from './accordion.js';
 // Document data
 // ---------------------------------------------------------------------------
 
-const GROUP_ORDER = ['estatuto', 'politicas', 'regimentos', 'outros'];
+const TYPE_ORDER = ['codigo', 'politicas', 'regimentos'];
 
-const GROUP_LABELS = {
-  estatuto:   'Estatuto Social',
-  politicas:  'Políticas Corporativas',
-  regimentos: 'Regimentos Internos',
-  outros:     'Outros Documentos',
+const TYPE_LABELS = {
+  codigo:    'Código de Ética e Conduta Profissional',
+  politicas:  'Políticas',
+  regimentos: 'Regimentos',
 };
 
 const DOCS = [
-  // Estatuto Social
-  { group: 'estatuto', title: 'Estatuto Social — Versão Vigente',                   date: '30 Abr 2026', size: '0,8 MB' },
-  { group: 'estatuto', title: 'Estatuto Social — Versão 2024',                      date: '25 Abr 2024', size: '0,8 MB' },
-  { group: 'estatuto', title: 'Estatuto Social — Versão 2023',                      date: '28 Abr 2023', size: '0,7 MB' },
-
-  // Políticas Corporativas
-  { group: 'politicas', title: 'Política de Divulgação de Informações',              date: '15 Jan 2026', size: '0,3 MB' },
-  { group: 'politicas', title: 'Política de Negociação de Valores Mobiliários',      date: '15 Jan 2026', size: '0,3 MB' },
-  { group: 'politicas', title: 'Política de Gerenciamento de Riscos',                date: '20 Mar 2025', size: '0,5 MB' },
-  { group: 'politicas', title: 'Política Antisuborno e Anticorrupção',               date: '10 Fev 2025', size: '0,4 MB' },
-  { group: 'politicas', title: 'Política de Responsabilidade Socioambiental',        date: '05 Jan 2025', size: '0,6 MB' },
-  { group: 'politicas', title: 'Política de Remuneração dos Administradores',        date: '30 Abr 2024', size: '0,3 MB' },
-  { group: 'politicas', title: 'Política de Transações com Partes Relacionadas',     date: '10 Mar 2024', size: '0,4 MB' },
-
-  // Regimentos Internos
-  { group: 'regimentos', title: 'Regimento Interno do Conselho de Administração',    date: '30 Abr 2026', size: '0,5 MB' },
-  { group: 'regimentos', title: 'Regimento Interno do Comitê de Auditoria',          date: '30 Abr 2026', size: '0,4 MB' },
-  { group: 'regimentos', title: 'Regimento Interno do Comitê de Remuneração',        date: '30 Abr 2025', size: '0,4 MB' },
-  { group: 'regimentos', title: 'Regimento Interno do Conselho Fiscal',              date: '28 Abr 2023', size: '0,4 MB' },
-
-  // Outros
-  { group: 'outros', title: 'Código de Ética e Conduta',                             date: '10 Jan 2026', size: '1,2 MB' },
-  { group: 'outros', title: 'Carta Anual de Governança Corporativa 2025',            date: '31 Mar 2026', size: '0,9 MB' },
-  { group: 'outros', title: 'Carta Anual de Governança Corporativa 2024',            date: '28 Mar 2025', size: '0,8 MB' },
+  // 2026
+  { year: 2026, type: 'codigo',        title: 'Código de Ética e de Conduta Profissional',                                                         date: '14 Mai 2026', size: '2,1 MB' },
+  { year: 2026, type: 'politicas',         title: 'Política Anticorrupção',                                       date: '29 Mai 2026', size: '4,8 MB' },
+  { year: 2026, type: 'regimentos',         title: 'Regimento Interno do Conselho de Administração',                             date: '15 Jan 2026', size: '0,4 MB' },
 ];
 
 // ---------------------------------------------------------------------------
@@ -53,7 +32,7 @@ const DOCS = [
 const ICON_DOWNLOAD = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>`;
 
 let _uid = 0;
-function uid() { return `acc-ep-${++_uid}`; }
+function uid() { return `acc-cvm-${++_uid}`; }
 
 function docListHtml(docs) {
   return `<ul class="doc-list">
@@ -72,21 +51,30 @@ function docListHtml(docs) {
   </ul>`;
 }
 
-function renderList() {
-  const container = document.querySelector('[data-ep-list]');
+function renderList(year) {
+  const container = document.querySelector('[data-estatuto-list]');
   if (!container) return;
 
-  const groups = GROUP_ORDER
-    .map(group => ({ group, docs: DOCS.filter(d => d.group === group) }))
+  const yearDocs = DOCS.filter(d => d.year === year);
+
+  if (!yearDocs.length) {
+    container.innerHTML = `<p style="text-align:center;color:var(--color-text-muted);padding:3rem 0">Nenhum documento disponível para ${year}.</p>`;
+    return;
+  }
+
+  // Group by type in display order
+  const groups = TYPE_ORDER
+    .map(type => ({ type, docs: yearDocs.filter(d => d.type === type) }))
     .filter(g => g.docs.length > 0);
 
+  // Render accordion — first group opens by default
   const accId = uid();
   container.innerHTML = `<div class="accordion" data-accordion id="${accId}">
-    ${groups.map(({ group, docs }) => {
+    ${groups.map(({ type, docs }, i) => {
       const contentId = uid();
       return `<div class="accordion__item" data-accordion-item>
         <button class="accordion__trigger" data-accordion-trigger aria-expanded="false" aria-controls="${contentId}">
-          <span class="accordion__label">${GROUP_LABELS[group]}</span>
+          <span class="accordion__label">${TYPE_LABELS[type]}</span>
         </button>
         <div class="accordion__content" id="${contentId}" role="region">
           <div class="accordion__body">
@@ -97,8 +85,10 @@ function renderList() {
     }).join('')}
   </div>`;
 
+  // Initialize accordion JS on the freshly rendered element
   const accEl = container.querySelector('[data-accordion]');
   if (accEl) {
+    // Open first item
     accEl.dataset.accordionOpen = '0';
     initAccordion(accEl);
   }
@@ -109,5 +99,13 @@ function renderList() {
 // ---------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderList();
+  const sel = document.querySelector('[data-estatuto-year]');
+  const currentYear = new Date().getFullYear();
+
+  if (sel) {
+    sel.value = String(currentYear);
+    sel.addEventListener('change', e => renderList(Number(e.target.value)));
+  }
+
+  renderList(currentYear);
 });
