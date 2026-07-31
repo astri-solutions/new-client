@@ -6,9 +6,9 @@ import './reveal.js';
 
 const DOCS = [
   // 2026
-  { year: '2026', formato: 'pdf', title: 'Estatuto Social - Assembleia Geral Ordinária - Reapresentação', date: '14 Mai 2026', size: '3,2 MB' },
+  { year: '2026', formato: 'pdf', title: 'Informe do Código Brasileiro de Governança Corporativa 2026', date: '14 Mai 2026', size: '3,2 MB' },
   // 2025
-  { year: '2025', formato: 'pdf', title: 'Estatuto Social - Assembleia Geral Ordinária', date: '12 Fev 2026', size: '4,1 MB' },
+  { year: '2025', formato: 'pdf', title: 'Informe do Código Brasileiro de Governança Corporativa 2025', date: '12 Fev 2025', size: '4,1 MB' },
 ];
 
 // ─── Estado ──────────────────────────────────────────────────────────────────
@@ -23,7 +23,7 @@ const ICON_DOWNLOAD = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor
 // ─── Render ──────────────────────────────────────────────────────────────────
 
 function render() {
-  const list = document.querySelector('[data-es-list]');
+  const list = document.querySelector('[data-ig-list]');
   if (!list) return;
 
   let docs = DOCS;
@@ -55,7 +55,7 @@ function render() {
 
 // ─── Filtros ─────────────────────────────────────────────────────────────────
 
-document.querySelector('[data-es-year]')?.addEventListener('change', e => {
+document.querySelector('[data-ig-year]')?.addEventListener('change', e => {
   activeYear = e.target.value;
   render();
 });
