@@ -206,61 +206,56 @@
       <section class="page-section">
         <div class="page-section__container">
 
-          <!-- Filtros -->
-          <div class="page-filter">
-            <div class="page-filter__group">
-              <span class="page-filter__label">PERÍODO</span>
-              <span class="select">
-                <select class="select__field" data-ca-period>
-                  <option value="1T26">1T26</option>
-                  <option value="4T25">4T25</option>
-                  <option value="4T24">4T24</option>
-                </select>
-              </span>
-            </div>
-            <div class="page-filter__group">
-              <span class="page-filter__label">PERFIL</span>
-              <span class="select">
-                <select class="select__field" data-ca-perfil>
-                  <option value="todos">Todos</option>
-                  <option value="controlador">Controlador</option>
-                  <option value="institucional">Institucional</option>
-                  <option value="freeFloat">Free Float</option>
-                </select>
-              </span>
-            </div>
-          </div>
-
-          <!-- Notas de emissão -->
-          <div class="ca-notes">
-            <div class="ca-note"><strong>SMTO3</strong> (ON) — Total emitido: <strong>120.000.000</strong> ações ordinárias</div>
-            <div class="ca-note"><strong>SMTO3</strong> (PN) — Total emitido: <strong>80.000.000</strong> ações preferenciais</div>
-          </div>
-
           <!-- Tabela -->
           <div class="data-table">
             <div class="data-table__scroller">
               <table>
                 <thead>
                   <tr>
-                    <th>Acionista</th>
-                    <th>Perfil</th>
-                    <th class="mono">SMTO3 (ON)</th>
-                    <th class="mono">% ON</th>
-                    <th class="mono">SMTO3 (PN)</th>
-                    <th class="mono">% PN</th>
-                    <th class="mono">Total</th>
-                    <th class="mono">% Capital</th>
+                    <th>Acionistas</th>
+                    <th class="mono">Ações ordinárias</th>
+                    <th class="mono">%</th>
                   </tr>
                 </thead>
                 <tbody data-ca-tbody>
+                    <tr>
+                      <td>LJN Participações S.A.</td>
+                      <td class="mono">190.242.864</td>
+                      <td class="mono">57,23</td>
+                    </tr>
+                    <tr>
+                      <td>Controladores Indiretos</td>
+                      <td class="mono">14.755.474</td>
+                      <td class="mono">4,44</td>
+                    </tr>
+                    <tr>
+                      <td>Administradores</td>
+                      <td class="mono">1.427.501	</td>
+                      <td class="mono">0,43</td>
+                    </tr>
+                    <tr>
+                      <td>Tesouraria</td>
+                      <td class="mono">9.662.100	</td>
+                      <td class="mono">2,91</td>
+                    </tr>
+                    <tr>
+                      <td>Ações em Circulação</td>
+                      <td class="mono">116.347.452</td>
+                      <td class="mono">35,00</td>
+                    </tr>
                 </tbody>
                 <tfoot>
-                  <tr data-ca-total></tr>
+                  <tr data-ca-total>
+                    <td>Total</td>
+                    <td class="mono">332.435.391</td>
+                    <td class="mono">100,00</td>
+                  </tr>
                 </tfoot>
               </table>
             </div>
           </div>
+
+          <p class="ci-section-lead">*Posição em Junho/2026</p>
 
         </div>
       </section>

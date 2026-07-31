@@ -140,6 +140,20 @@
   max-width: 640px;
 }
 
+.ci-section-list {
+  list-style: unset;
+  
+  .ci-section-list-item {
+    list-style: unset;
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+    margin: 0 0 2rem;
+    max-width: 640px;
+  }
+}
+
+
 .ci-papers {
   display: grid;
   grid-template-columns: 1fr 1fr;
