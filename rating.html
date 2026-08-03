@@ -206,64 +206,33 @@
       <section class="page-section">
         <div class="page-section__container">
 
-          <!-- ── Ratings de Crédito ── -->
-          <h2 class="rc-section-title">Ratings de Crédito</h2>
-          <p class="rc-section-desc">Classificações de risco de crédito atribuídas à companhia pelas principais agências internacionais.</p>
-
           <div class="data-table">
             <div class="data-table__scroller">
               <table>
                 <thead>
                   <tr>
-                    <th>Agência</th>
-                    <th>Tipo</th>
-                    <th>Escala</th>
-                    <th class="mono">Rating</th>
-                    <th>Perspectiva</th>
-                    <th class="mono">Revisão</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col"></th>
+                    <th scope="col">Escala</th>
                   </tr>
                 </thead>
-                <tbody data-rc-ratings></tbody>
-              </table>
-            </div>
-          </div>
-
-          <!-- ── Cobertura de Analistas ── -->
-          <h2 class="rc-section-title">Cobertura de Analistas</h2>
-          <p class="rc-section-desc">Instituições que acompanham e publicam relatórios sobre os papéis da companhia.</p>
-
-          <div class="page-filter">
-            <div class="page-filter__group">
-              <span class="page-filter__label">RECOMENDAÇÃO</span>
-              <span class="select">
-                <select class="select__field" data-rc-rec>
-                  <option value="todos">Todas</option>
-                  <option value="compra">Compra</option>
-                  <option value="neutro">Neutro</option>
-                  <option value="venda">Venda</option>
-                </select>
-              </span>
-            </div>
-            <span class="page-filter__label" data-rc-count></span>
-          </div>
-
-          <div class="data-table">
-            <div class="data-table__scroller">
-              <table>
-                <thead>
+                <tbody>
                   <tr>
-                    <th>Instituição</th>
-                    <th>Analista</th>
-                    <th>Recomendação</th>
-                    <th class="mono">P.A. SMTO3</th>
-                    <th class="mono">P.A. SMTO3</th>
-                    <th class="mono">Atualização</th>
+                    <td><a href="#">S&P*</a></td>
+                    <td>Nacional</td>
+                    <td>Global</td>
                   </tr>
-                </thead>
-                <tbody data-rc-analistas></tbody>
+                  <tr>
+                    <td>Outubro/2024</td>
+                    <td>AAA</td>
+                    <td>BBB- (Grau de Investimento)</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
+
+          <p class="div-history__note">*Disponível apenas em inglês.</p>
 
         </div>
       </section>
