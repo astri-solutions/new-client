@@ -207,138 +207,53 @@
         </div>
       </section>
 
-      <!-- ===================================================
-           KPIs — Proventos
-           =================================================== -->
-      <section class="page-section page-section--alt" aria-label="Indicadores de proventos" data-reveal>
-        <div class="page-section__container">
-          <div class="div-kpis">
-            <div class="div-kpi" data-reveal>
-              <span class="div-kpi__label">Total Distribuído</span>
-              <span class="div-kpi__value" data-kpi="total">—</span>
-            </div>
-            <div class="div-kpi" data-reveal>
-              <span class="div-kpi__label">Últ. 12 meses</span>
-              <span class="div-kpi__value" data-kpi="ult12">—</span>
-            </div>
-            <div class="div-kpi" data-reveal>
-              <span class="div-kpi__label">Provento/ação (últ. 12m)</span>
-              <span class="div-kpi__value" data-kpi="provento">—</span>
-            </div>
-            <div class="div-kpi" data-reveal>
-              <span class="div-kpi__label">Distribuições realizadas</span>
-              <span class="div-kpi__value" data-kpi="count">—</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================================================
-           GRÁFICO + TABELA DE DIVIDENDOS
-           =================================================== -->
-      <section class="page-section" aria-labelledby="sec-div-title" data-reveal>
+      <section class="page-section">
         <div class="page-section__container">
 
-          <div class="div-section-header">
-            <h2 id="sec-div-title" class="div-section-header__title">Histórico de Proventos</h2>
-            <a class="div-download-btn" href="#" data-div-download aria-label="Baixar planilha de dividendos">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Baixar planilha
-            </a>
-          </div>
-
-          <!-- Gráfico -->
-          <div class="div-chart-card" data-reveal>
-            <div class="div-chart-card__inner">
-              <canvas id="div-chart" aria-label="Gráfico de proventos por ano" role="img"></canvas>
-            </div>
-          </div>
-
-          <!-- Filtro + tabela -->
-          <div class="div-table-header" data-reveal>
-            <h3 class="div-table-header__title">Detalhamento por distribuição</h3>
-            <div class="page-filter__group">
-              <span class="page-filter__label">ANO</span>
-              <span class="select">
-                <select class="select__field" data-div-year aria-label="Filtrar por ano">
-                  <option value="">Todos</option>
-                </select>
-              </span>
-            </div>
-          </div>
-
-          <div class="data-table" data-reveal>
+          <div class="data-table">
             <div class="data-table__scroller">
-              <table aria-label="Histórico de dividendos e JCP">
-                <thead>
-                  <tr>
-                    <th>Período</th>
-                    <th>Tipo</th>
-                    <th>Valor/ação</th>
-                    <th>Data-base</th>
-                    <th>Pagamento</th>
-                    <th>Total distribuído</th>
-                  </tr>
-                </thead>
-                <tbody data-div-tbody>
-                  <tr><td colspan="6" class="div-table__empty">Carregando dados…</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ===================================================
-           RECOMPRA DE AÇÕES
-           =================================================== -->
-      <section class="page-section page-section--alt" aria-labelledby="sec-rec-title" data-reveal>
-        <div class="page-section__container">
-
-          <h2 id="sec-rec-title" class="div-section-header__title" style="margin-bottom: 2rem;">Programas de Recompra</h2>
-
-          <!-- KPIs recompra -->
-          <div class="div-kpis div-kpis--rec" data-reveal>
-            <div class="div-kpi">
-              <span class="div-kpi__label">Total investido</span>
-              <span class="div-kpi__value" data-kpi="rec-total">—</span>
-            </div>
-            <div class="div-kpi">
-              <span class="div-kpi__label">Ações autorizadas</span>
-              <span class="div-kpi__value" data-kpi="rec-qtd-aut">—</span>
-            </div>
-            <div class="div-kpi">
-              <span class="div-kpi__label">Ações recompradas</span>
-              <span class="div-kpi__value" data-kpi="rec-qtd-rec">—</span>
-            </div>
-            <div class="div-kpi">
-              <span class="div-kpi__label">Execução total</span>
-              <span class="div-kpi__value" data-kpi="rec-pct">—</span>
-            </div>
-          </div>
-
-          <!-- Tabela recompra -->
-          <div class="data-table" style="margin-top: 2rem;" data-reveal>
-            <div class="data-table__scroller">
-              <table aria-label="Programas de recompra de ações">
-                <thead>
-                  <tr>
-                    <th>Programa</th>
-                    <th>Início</th>
-                    <th>Término</th>
-                    <th>Qtd. autorizada</th>
-                    <th>Qtd. recomprada</th>
-                    <th>Execução</th>
-                    <th>Total gasto</th>
-                    <th>Preço médio</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody data-recompra-tbody>
-                  <tr><td colspan="9" class="div-table__empty">Carregando dados…</td></tr>
-                </tbody>
-              </table>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Data Anúncio Recompra</th>
+                  <th scope="col">Prazo de Validade do Programa</th>
+                  <th scope="col">Quantidade de Ações a Serem Adquiridas</th>
+                  <th scope="col">Quantidade de Ações Adquiridas</th>
+                  <th scope="col">Preço de Recompra</th>
+                  <th scope="col">Local das Aquisições</th>
+                  <th scope="col">Instituição Intermediária</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>30/set/24</td>
+                  <td>30/mar/26</td>
+                  <td>Até 10.000.000</td>
+                  <td>9.662.100</td>
+                  <td>Mercado (Bolsa)</td>
+                  <td>B3</td>
+                  <td>BTG Pactual S.A., Itaú Corretora S.A. e/ou  XP Investimentos S.A.</td>
+                </tr>
+                <tr>
+                  <td>25/mar/24</td>
+                  <td>25/set/25</td>
+                  <td>Até 14.234.811</td>
+                  <td>14.218.800</td>
+                  <td>Mercado (Bolsa)</td>
+                  <td>B3</td>
+                  <td>BTG Pactual S.A., Itaú Corretora S.A. e/ou  XP Investimentos S.A.</td>
+                </tr>
+                <tr>
+                  <td>24/jun/19</td>
+                  <td>23/dez/20</td>
+                  <td>Até 10.000.000</td>
+                  <td>4.427.600</td>
+                  <td>Mercado (Bolsa)</td>
+                  <td>B3</td>
+                  <td>BTG Pactual S.A. / Itaú Corretora S.A.</td>
+                </tr>
+              </tbody>
+            </table>
             </div>
           </div>
 
@@ -463,7 +378,5 @@
         <p class="search-overlay__hint">Pressione <kbd>ESC</kbd> para fechar</p>
       </div>
     </div>
-
-    <script type="module" src="/scripts/dividendos-recompra.js"></script>
   </body>
 </html>
