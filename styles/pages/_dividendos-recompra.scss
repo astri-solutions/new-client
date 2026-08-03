@@ -211,3 +211,70 @@
     color: var(--color-text-muted);
   }
 }
+
+// =============================================================================
+// POLÍTICA DE DIVIDENDOS — accordion body styles
+// =============================================================================
+
+.div-policy {
+  p + p,
+  p + ul,
+  ul + p {
+    margin-top: $spacing-4;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: $spacing-6;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2;
+  }
+
+  li {
+    font-size: $font-size-sm;
+    color: var(--color-text);
+    line-height: $line-height-relaxed;
+  }
+}
+
+// =============================================================================
+// HISTÓRICO DE PAGAMENTO — table + note
+// =============================================================================
+
+.div-history {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+
+  &__unit {
+    font-style: italic;
+    font-size: $font-size-xs;
+    color: var(--color-text-muted);
+    font-weight: $font-weight-regular;
+    padding-top: $spacing-1;
+    padding-bottom: $spacing-1;
+  }
+
+  &__note {
+    font-size: $font-size-xs;
+    color: var(--color-text-muted);
+    padding: $spacing-3 $spacing-6;
+    margin: 0;
+
+    a { color: var(--color-primary); }
+  }
+
+  // Make all data cells non-wrapping so the table scrolls horizontally
+  .data-table table {
+    white-space: nowrap;
+  }
+
+  .data-table th[scope="row"] {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+
+// Utility: centered table header text
+.text-center { text-align: center; }

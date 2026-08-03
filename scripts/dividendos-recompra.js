@@ -6,6 +6,7 @@
 import './topbar.js';
 import './nav.js';
 import './reveal.js';
+import './accordion.js';
 import { Chart, registerables } from 'chart.js';
 import * as XLSX from 'xlsx';
 
