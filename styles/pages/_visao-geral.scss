@@ -17,7 +17,6 @@
 
   &--full {
     display: block;
-    .show-grid__text { max-width: 740px; }
   }
 
   @include respond-down(desktop) {
@@ -56,7 +55,7 @@
   color: var(--color-text-muted);
   line-height: $line-height-loose;
 
-  p + p { margin-top: $spacing-4; }
+  p + p { margin-top: $spacing-8; }
 }
 
 .show-grid__highlights {

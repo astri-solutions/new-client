@@ -358,7 +358,7 @@
     font-size: $font-size-sm;
     font-weight: $font-weight-semibold;
     color: var(--color-text);
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
   }
