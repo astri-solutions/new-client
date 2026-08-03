@@ -262,6 +262,17 @@
 // CONSELHO DE ADMINISTRAÇÃO — intro text + accordion column header
 // =============================================================================
 
+.board-section-title {
+  font-family: $font-family-display;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: var(--color-heading);
+  line-height: $line-height-snug;
+  margin-bottom: $spacing-6;
+
+  @include respond-down(tablet) { font-size: $font-size-2xl; }
+}
+
 .board-intro {
   max-width: 72ch;
   margin-bottom: $spacing-8;

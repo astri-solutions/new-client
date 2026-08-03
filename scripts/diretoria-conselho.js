@@ -1,7 +1,7 @@
 import './topbar.js';
 import './nav.js';
 import './reveal.js';
-import './accordion.js';
+import { initAccordion } from './accordion.js';
 
 function drawOrgLines() {
   const chart = document.querySelector('[data-org-chart]');
@@ -74,7 +74,10 @@ function drawOrgLines() {
   empEdges.forEach(e => path(`M ${e.cx} ${trunkY} L ${e.cx} ${e.top}`));
 }
 
-drawOrgLines();
+document.addEventListener('DOMContentLoaded', () => {
+  drawOrgLines();
+  document.querySelectorAll('[data-accordion]').forEach(initAccordion);
+});
 
 let tid;
 window.addEventListener('resize', () => {
