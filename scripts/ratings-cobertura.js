@@ -5,11 +5,11 @@ import './reveal.js';
 // ─── Ratings de Crédito ───────────────────────────────────────────────────────
 
 const RATINGS = [
-  { agencia: 'Fitch Ratings', tipo: 'Corporativo', escala: 'Nacional', rating: 'brAA+',  perspectiva: 'estavel',  data: 'Mar 2026' },
-  { agencia: 'Fitch Ratings', tipo: 'Corporativo', escala: 'Global',   rating: 'BB+',    perspectiva: 'estavel',  data: 'Mar 2026' },
-  { agencia: 'S&P Global',    tipo: 'Corporativo', escala: 'Nacional', rating: 'brAA',   perspectiva: 'positivo', data: 'Jan 2026' },
-  { agencia: 'S&P Global',    tipo: 'Corporativo', escala: 'Global',   rating: 'BB',     perspectiva: 'positivo', data: 'Jan 2026' },
-  { agencia: "Moody's",       tipo: 'Corporativo', escala: 'Global',   rating: 'Ba1',    perspectiva: 'estavel',  data: 'Fev 2026' },
+  { instituicao: 'Fitch Ratings', analista: 'Corporativo', recomendacao: 'Nacional', precoAlvo: 'brAA+' },
+  { instituicao: 'Fitch Ratings', analista: 'Corporativo', recomendacao: 'Global',   precoAlvo: 'BB+' },
+  { instituicao: 'S&P Global',    analista: 'Corporativo', recomendacao: 'Nacional', precoAlvo: 'brAA'},
+  { instituicao: 'S&P Global',    analista: 'Corporativo', recomendacao: 'Global',   precoAlvo: 'BB'},
+  { instituicao: "Moody's",       analista: 'Corporativo', recomendacao: 'Global',   precoAlvo: 'Ba1' },
 ];
 
 const PERSPECTIVA_LABEL = {
@@ -58,10 +58,10 @@ function renderRatings() {
 
   tbody.innerHTML = RATINGS.map(r => `
     <tr>
-      <td>${r.agencia}</td>
-      <td>${r.tipo}</td>
-      <td>${r.escala}</td>
-      <td class="mono"><strong>${r.rating}</strong></td>
+      <td>${r.instituicao}</td>
+      <td>${r.analista}</td>
+      <td>${r.recomendacao}</td>
+      <td class="mono"><strong>${r.precoAlvo}</strong></td>
       <td>${perspBadge(r.perspectiva)}</td>
       <td class="mono">${r.data}</td>
     </tr>

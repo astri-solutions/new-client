@@ -196,7 +196,7 @@
           <ol class="page-header__breadcrumb" aria-label="Você está em">
             <li><a href="/">Home</a></li>
             <li><a href="/documentos-cvm.html">Investidores</a></li>
-            <li aria-current="page">Ratings e Cobertura de Analistas</li>
+            <li aria-current="page">Cobertura de Analista</li>
           </ol>
           <h1 id="page-title" class="page-header__title">Cobertura de Analista</h1>
           <p class="page-header__lede">Classificações de crédito e analistas que cobrem os papéis da companhia.</p>
@@ -207,63 +207,84 @@
         <div class="page-section__container">
 
           <!-- ── Ratings de Crédito ── -->
-          <h2 class="rc-section-title">Ratings de Crédito</h2>
-          <p class="rc-section-desc">Classificações de risco de crédito atribuídas à companhia pelas principais agências internacionais.</p>
 
           <div class="data-table">
             <div class="data-table__scroller">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Agência</th>
-                    <th>Tipo</th>
-                    <th>Escala</th>
-                    <th class="mono">Rating</th>
-                    <th>Perspectiva</th>
-                    <th class="mono">Revisão</th>
-                  </tr>
-                </thead>
-                <tbody data-rc-ratings></tbody>
-              </table>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Instituição</th>
+                  <th scope="col">Analista</th>
+                  <th scope="col">Recomendação</th>
+                  <th scope="col">Preço Alvo (R$)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Bradesco</td>
+                  <td>Henrique Brustolin</td>
+                  <td>Neutro</td>
+                  <td>21,00</td>
+                </tr>
+                <tr>
+                  <td>BTG Pactual</td>
+                  <td>Thiago Duarte</td>
+                  <td>Neutro</td>
+                  <td>25,00</td>
+                </tr>
+                <tr>
+                  <td>Citi</td>
+                  <td>Gabriel Barra</td>
+                  <td>Neutro</td>
+                  <td>16,00</td>
+                </tr>
+                <tr>
+                  <td>Itaú</td>
+                  <td>Gustavo Troyano</td>
+                  <td>Neutro</td>
+                  <td>21,00</td>
+                </tr>
+                <tr>
+                  <td>JP Morgan</td>
+                  <td>Lucas Ferreira</td>
+                  <td>Neutro</td>
+                  <td>19,00</td>
+                </tr>
+                <tr>
+                  <td>Bank of America</td>
+                  <td>Isabella Simonato</td>
+                  <td>Venda</td>
+                  <td>15,00</td>
+                </tr>
+                <tr>
+                  <td>Morgan Stanley</td>
+                  <td>Julia Rizzo</td>
+                  <td>Neutro</td>
+                  <td>24,00</td>
+                </tr>
+                <tr>
+                  <td>Santander</td>
+                  <td>Rodrigo Reis De Almeida</td>
+                  <td>Compra</td>
+                  <td>36,00</td>
+                </tr>
+                <tr>
+                  <td>UBS</td>
+                  <td>Matheus Enfeldt</td>
+                  <td>Neutro</td>
+                  <td>19,50</td>
+                </tr>
+                <tr>
+                  <td>XP Investimentos</td>
+                  <td>Leonardo Alencar</td>
+                  <td>Neutro</td>
+                  <td>14,80</td>
+                </tr>
+              </tbody>
+            </table>
             </div>
           </div>
-
-          <!-- ── Cobertura de Analistas ── -->
-          <h2 class="rc-section-title">Cobertura de Analistas</h2>
-          <p class="rc-section-desc">Instituições que acompanham e publicam relatórios sobre os papéis da companhia.</p>
-
-          <div class="page-filter">
-            <div class="page-filter__group">
-              <span class="page-filter__label">RECOMENDAÇÃO</span>
-              <span class="select">
-                <select class="select__field" data-rc-rec>
-                  <option value="todos">Todas</option>
-                  <option value="compra">Compra</option>
-                  <option value="neutro">Neutro</option>
-                  <option value="venda">Venda</option>
-                </select>
-              </span>
-            </div>
-            <span class="page-filter__label" data-rc-count></span>
-          </div>
-
-          <div class="data-table">
-            <div class="data-table__scroller">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Instituição</th>
-                    <th>Analista</th>
-                    <th>Recomendação</th>
-                    <th class="mono">P.A. SMTO3</th>
-                    <th class="mono">P.A. SMTO3</th>
-                    <th class="mono">Atualização</th>
-                  </tr>
-                </thead>
-                <tbody data-rc-analistas></tbody>
-              </table>
-            </div>
-          </div>
+          <p class="div-history__note">Baseado nos relatórios publicados mais recentemente.</p>
 
         </div>
       </section>
@@ -385,7 +406,5 @@
         <p class="search-overlay__hint">Pressione <kbd>ESC</kbd> para fechar</p>
       </div>
     </div>
-
-    <script type="module" src="/scripts/ratings-cobertura.js"></script>
   </body>
 </html>
