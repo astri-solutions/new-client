@@ -10,7 +10,7 @@ const DOCS = [
   { year: '2026', formato: 'pdf', title: 'Boletim de voto à distância - Assembleia Geral Ordinária', date: '18 Mar 2026', size: '8,5 MB' },
 
   // 2025
-  { year: '2025', formato: 'pdf', title: 'Boletim de voto à distância - Assembleia Geral Ordinária', date: '12 Fev 2026', size: '4,1 MB' },
+  { year: '2025', formato: 'pdf', title: 'Boletim de voto à distância - Assembleia Geral Ordinária', date: '12 Fev 2025', size: '4,1 MB' },
 ];
 
 // ─── Estado ──────────────────────────────────────────────────────────────────

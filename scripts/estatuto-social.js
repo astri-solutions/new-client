@@ -8,7 +8,7 @@ const DOCS = [
   // 2026
   { year: '2026', formato: 'pdf', title: 'Estatuto Social - Assembleia Geral Ordinária - Reapresentação', date: '14 Mai 2026', size: '3,2 MB' },
   // 2025
-  { year: '2025', formato: 'pdf', title: 'Estatuto Social - Assembleia Geral Ordinária', date: '12 Fev 2026', size: '4,1 MB' },
+  { year: '2025', formato: 'pdf', title: 'Estatuto Social - Assembleia Geral Ordinária', date: '12 Fev 2025', size: '4,1 MB' },
 ];
 
 // ─── Estado ──────────────────────────────────────────────────────────────────
