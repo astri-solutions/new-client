@@ -85,6 +85,8 @@
     background-color: var(--color-title);
     color: #fff;
 
+    .accordion__cargo { color: rgba(255, 255, 255, 0.65); }
+
     &::after {
       content: '\2212'; // − (U+2212 MINUS SIGN)
       color: rgba(255, 255, 255, 0.5);
@@ -117,6 +119,15 @@
     font-weight: $font-weight-regular;
     color: var(--color-text-muted);
     white-space: nowrap;
+  }
+
+  // ---- Cargo label (board member variant)
+  &__cargo {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-regular;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   // ---- Chevron SVG (legacy — hidden; ::after handles icon now)

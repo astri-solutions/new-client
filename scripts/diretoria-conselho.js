@@ -1,6 +1,7 @@
 import './topbar.js';
 import './nav.js';
 import './reveal.js';
+import './accordion.js';
 
 function drawOrgLines() {
   const chart = document.querySelector('[data-org-chart]');
