@@ -96,7 +96,7 @@
 // Usado nas páginas internas de subseção (ex: Visão Institucional).
 .page-header-split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: .65fr 1fr;
   height: 350px;
   position: relative;
   background: var(--color-bg);
@@ -165,7 +165,7 @@
 
   &__image {
     width: 100%;
-    height: 380px;
+    height: 100%;
     object-fit: contain;
     object-position: right center;
     display: block;
