@@ -1,6 +1,16 @@
 @use '../abstracts' as *;
 
 // =============================================================================
+// DOCUMENTO GRID — override de contexto para .esg-reports-grid fora do show-grid
+// =============================================================================
+
+// Quando o .esg-reports-grid está diretamente no page-section__container
+// (fora do show-grid--full), garante margem superior consistente.
+.page-section__container > .esg-reports-grid {
+  margin-top: $spacing-8;
+}
+
+// =============================================================================
 // CANAL ÉTICO / CANAL DE PRIVACIDADE — cards informativos
 // =============================================================================
 
@@ -14,7 +24,7 @@
 }
 
 .ethics-card {
-  background: var(--color-surface);
+  background: var(--color-section-bg-alt);
   border-radius: $radius-lg;
   padding: $spacing-8 $spacing-10;
   text-align: center;
