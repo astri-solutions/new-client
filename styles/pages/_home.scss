@@ -13,6 +13,16 @@
 @use '../abstracts' as *;
 
 // =============================================================================
+// Home: hero se estende atrás do header transparente
+// Sobrescreve o padding-top global (topbar + header) para apenas topbar,
+// permitindo que o hero inicie logo abaixo da topbar com o header sobreposto.
+// =============================================================================
+
+body.page-home main {
+  padding-top: var(--topbar-h, 3rem);
+}
+
+// =============================================================================
 // 1. HERO / SLIDER
 // =============================================================================
 
