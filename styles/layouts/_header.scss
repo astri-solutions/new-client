@@ -408,7 +408,7 @@
     transition: color $transition-fast, background-color $transition-fast;
 
     @include respond-up(desktop) {
-      font-size: $font-size-sm;
+      font-size: $font-size-lg;
       padding: $spacing-2 $spacing-3;
       color: var(--color-text-muted);
       border-radius: $radius-sm;
