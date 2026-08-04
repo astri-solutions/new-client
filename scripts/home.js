@@ -24,43 +24,74 @@ import './splash.js';
 
 const INTERVAL_MS = 4000;
 
+/* -----------------------------------------------------------------------------
+ * SLIDER do banner
+ *
+ * - Troca automática a cada INTERVAL_MS.
+ * - Setas de navegação, contador "X/total" e barra de progresso animada.
+ * - Pausa ao hover/focus; respeita prefers-reduced-motion.
+ * --------------------------------------------------------------------------- */
+
 function initHeroSlider() {
   const track = document.querySelector('[data-hero-track]');
   if (!track) return;
 
-  const slides = Array.from(track.querySelectorAll('[data-hero-slide]'));
-  const bullets = Array.from(document.querySelectorAll('[data-hero-bullet]'));
-  const prevBtn = document.querySelector('[data-hero-prev]');
-  const nextBtn = document.querySelector('[data-hero-next]');
-  const hero = track.closest('.hero');
+  const slides    = Array.from(track.querySelectorAll('[data-hero-slide]'));
+  const prevBtn   = document.querySelector('[data-hero-prev]');
+  const nextBtn   = document.querySelector('[data-hero-next]');
+  const currentEl = document.querySelector('[data-hero-current]');
+  const totalEl   = document.querySelector('[data-hero-total]');
+  const progress  = document.querySelector('[data-hero-progress]');
+  const hero      = track.closest('.hero');
 
   if (slides.length <= 1) return;
 
+  const total       = slides.length;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  let current = 0;
-  let timerId = null;
+  let current  = 0;
+  let timerId  = null;
   let isPaused = false;
 
+  // Popula contador total
+  if (totalEl) totalEl.textContent = total;
+
+  // ---- Contador
+  function updateCounter() {
+    if (currentEl) currentEl.textContent = current + 1;
+  }
+
+  // ---- Barra de progresso
+  function restartProgress() {
+    if (!progress || reduceMotion) return;
+    progress.classList.remove('is-animating', 'is-paused');
+    void progress.offsetWidth; // reflow para reiniciar animação
+    progress.style.animationDuration = `${INTERVAL_MS}ms`;
+    progress.classList.add('is-animating');
+  }
+
+  function pauseProgress()  { progress?.classList.add('is-paused'); }
+  function resumeProgress() { progress?.classList.remove('is-paused'); }
+
+  // ---- Transição de slides
   function goTo(nextIndex, direction = 1) {
     if (nextIndex === current) return;
 
-    const total = slides.length;
     nextIndex = ((nextIndex % total) + total) % total;
 
     const outgoing = slides[current];
     const incoming = slides[nextIndex];
 
-    // Clear any stale inline styles from an interrupted previous transition
+    // Limpa estados residuais de transição interrompida
     incoming.style.transition = 'none';
     incoming.classList.remove('is-leaving');
     void incoming.offsetWidth;
     incoming.style.transition = '';
 
-    // Position incoming off-screen before the transition starts
+    // Posiciona incoming fora da tela antes de animar
     incoming.style.transform = `translateX(${direction > 0 ? '100%' : '-100%'})`;
-    incoming.style.opacity = '0';
-    void incoming.offsetWidth; // reflow so position is applied before animation
+    incoming.style.opacity   = '0';
+    void incoming.offsetWidth;
 
     outgoing.classList.remove('is-active');
     outgoing.classList.add('is-leaving');
@@ -68,106 +99,100 @@ function initHeroSlider() {
 
     incoming.classList.add('is-active');
     incoming.style.transform = 'translateX(0)';
-    incoming.style.opacity = '1';
+    incoming.style.opacity   = '1';
 
-    // Cleanup the outgoing slide after its transition ends.
-    // Guard with a flag + disable CSS transition before reverting classes,
-    // otherwise removing .is-leaving triggers a ghost slide-right animation.
+    // Limpeza após a transição do slide saindo
     let cleanupDone = false;
     const doCleanup = () => {
       if (cleanupDone) return;
       cleanupDone = true;
       outgoing.style.transition = 'none';
-      void outgoing.offsetWidth; // reflow to apply transition:none immediately
+      void outgoing.offsetWidth;
       outgoing.classList.remove('is-leaving');
       outgoing.style.transform = '';
-      outgoing.style.opacity = '';
+      outgoing.style.opacity   = '';
       requestAnimationFrame(() => { outgoing.style.transition = ''; });
       outgoing.removeEventListener('transitionend', onTransitionEnd);
     };
-    // Only trigger on 'transform' — transitionend fires once per animated property
     const onTransitionEnd = (e) => { if (e.propertyName === 'transform') doCleanup(); };
     outgoing.addEventListener('transitionend', onTransitionEnd);
-    // Fallback: if transitionend doesn't fire (e.g. transition interrupted), clean up anyway
-    setTimeout(doCleanup, 950);
-
-    // Atualiza bullets
-    bullets.forEach((b, i) => {
-      const isActive = i === nextIndex;
-      b.classList.toggle('is-active', isActive);
-      b.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
+    setTimeout(doCleanup, 950); // fallback
 
     current = nextIndex;
+    updateCounter();
+    if (!isPaused) restartProgress();
   }
 
-  function next() { goTo(current + 1, 1); }
+  function next() { goTo(current + 1,  1); }
   function prev() { goTo(current - 1, -1); }
 
+  // ---- Autoplay
   function startAutoplay() {
     if (reduceMotion || isPaused) return;
     stopAutoplay();
     timerId = window.setInterval(next, INTERVAL_MS);
-
-    // Reinicia barra de progresso do bullet ativo
-    restartProgressBar();
   }
 
   function stopAutoplay() {
-    if (timerId) {
-      clearInterval(timerId);
-      timerId = null;
-    }
-  }
-
-  function restartProgressBar() {
-    bullets.forEach((b) => b.classList.remove('is-active'));
-    void bullets[current].offsetWidth; // reflow
-    bullets[current].classList.add('is-active');
+    if (timerId) { clearInterval(timerId); timerId = null; }
   }
 
   function pause() {
     isPaused = true;
     stopAutoplay();
-    bullets.forEach((b) => b.classList.add('is-paused'));
+    pauseProgress();
   }
 
   function resume() {
     isPaused = false;
-    bullets.forEach((b) => b.classList.remove('is-paused'));
+    resumeProgress();
     startAutoplay();
+    restartProgress();
   }
 
   // ---- Wiring
-  bullets.forEach((b) => {
-    b.addEventListener('click', () => {
-      const idx = Number(b.dataset.heroBullet);
-      const direction = idx > current ? 1 : -1;
-      goTo(idx, direction);
-      startAutoplay();
-    });
-  });
-
-  if (prevBtn) prevBtn.addEventListener('click', () => { prev(); startAutoplay(); });
-  if (nextBtn) nextBtn.addEventListener('click', () => { next(); startAutoplay(); });
+  prevBtn?.addEventListener('click', () => { prev(); startAutoplay(); });
+  nextBtn?.addEventListener('click', () => { next(); startAutoplay(); });
 
   if (hero) {
     hero.addEventListener('mouseenter', pause);
     hero.addEventListener('mouseleave', resume);
-    hero.addEventListener('focusin', pause);
-    hero.addEventListener('focusout', (e) => {
+    hero.addEventListener('focusin',    pause);
+    hero.addEventListener('focusout',   (e) => {
       if (!hero.contains(e.relatedTarget)) resume();
     });
   }
 
-  // Pausa quando a aba sai de foco (economiza CPU)
+  // Pausa quando a aba sai do foco (economiza CPU)
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) stopAutoplay();
-    else if (!isPaused) startAutoplay();
+    else if (!isPaused)  { startAutoplay(); restartProgress(); }
   });
 
   // Inicializa
+  updateCounter();
   startAutoplay();
+  restartProgress();
+}
+
+/* -----------------------------------------------------------------------------
+ * HEADER TRANSPARENTE — só na home, vira sólido ao fazer scroll
+ * --------------------------------------------------------------------------- */
+
+function initTransparentHeader() {
+  const header = document.querySelector('.site-header');
+  const hero   = document.querySelector('.hero');
+  if (!header || !hero) return;
+
+  const THRESHOLD = 80; // px scrollados antes de solidificar o header
+
+  function update() {
+    const isAtTop = window.scrollY < THRESHOLD;
+    header.classList.toggle('site-header--transparent', isAtTop);
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update(); // estado inicial
 }
 
 /* -----------------------------------------------------------------------------
@@ -219,6 +244,7 @@ function initForms() {
 
 // ---- Init
 document.addEventListener('DOMContentLoaded', () => {
+  initTransparentHeader();
   initHeroSlider();
   initForms();
 });
