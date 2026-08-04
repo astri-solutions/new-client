@@ -19,7 +19,7 @@
     <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/favicon-120px.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/favicon-152px.png" />
   </head>
-  <body>
+  <body class="page-home">
     <!-- ===================================================
          TOPBAR — Ticker · Acessibilidade · Idioma · Links
          =================================================== -->
@@ -61,7 +61,7 @@
       </div>
     </div>
 
-    <header class="site-header">
+    <header class="site-header site-header--transparent">
       <div class="site-header__inner">
         <a href="/" class="site-header__brand" aria-label="São Martinho S.A.">
           <img src="/assets/logotipo/logo_original.svg" alt="São Martinho S.A." class="site-header__logo" />
@@ -224,16 +224,22 @@
           </article>
         </div>
 
-        <!-- Controles -->
+        <!-- Controles: seta ← · contador · barra de progresso · seta → -->
         <div class="hero__controls">
-          <div class="hero__arrows">
-            <button class="hero__arrow" type="button" data-hero-prev aria-label="Slide anterior">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-            </button>
-            <button class="hero__arrow" type="button" data-hero-next aria-label="Próximo slide">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-            </button>
+          <button class="hero__arrow" type="button" data-hero-prev aria-label="Slide anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <span class="hero__counter">
+            <span data-hero-current>1</span>
+            <span class="hero__counter-sep">/</span>
+            <span data-hero-total>3</span>
+          </span>
+          <div class="hero__progress">
+            <div class="hero__progress-bar" data-hero-progress></div>
           </div>
+          <button class="hero__arrow" type="button" data-hero-next aria-label="Próximo slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
       </section>
 

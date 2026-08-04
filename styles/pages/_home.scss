@@ -13,6 +13,16 @@
 @use '../abstracts' as *;
 
 // =============================================================================
+// Home: hero se estende atrás do header transparente
+// Sobrescreve o padding-top global (topbar + header) para apenas topbar,
+// permitindo que o hero inicie logo abaixo da topbar com o header sobreposto.
+// =============================================================================
+
+body.page-home main {
+  padding-top: var(--topbar-h, 3rem);
+}
+
+// =============================================================================
 // 1. HERO / SLIDER
 // =============================================================================
 
@@ -97,7 +107,7 @@
     margin-bottom: 0;
   }
 
-  // ---- Controles inferiores (setas)
+  // ---- Controles inferiores: setas + contador + barra de progresso (alinhados à esquerda)
   &__controls {
     position: absolute;
     left: 0; right: 0; bottom: $spacing-8;
@@ -105,36 +115,73 @@
     @include container;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: $spacing-4;
+    justify-content: flex-start;
+    gap: $spacing-3;
     pointer-events: none;
 
     > * { pointer-events: auto; }
   }
 
-  &__arrows {
-    display: none;
-    gap: $spacing-2;
-
-    @include respond-up(md) { display: flex; }
-  }
-
   &__arrow {
-    width: 44px; height: 44px;
+    width: 40px; height: 40px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     border-radius: $radius-full;
     background-color: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.45);
     color: #fff;
     backdrop-filter: blur(8px);
     transition: background-color $transition-fast, transform $transition-fast;
 
-    &:hover { background-color: rgba(255, 255, 255, 0.25); }
+    &:hover { background-color: rgba(255, 255, 255, 0.26); }
     &:active { transform: scale(0.94); }
 
-    svg { width: 18px; height: 18px; }
+    svg { width: 16px; height: 16px; }
+  }
+
+  &__counter {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-family-mono);
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: #fff;
+    white-space: nowrap;
+    user-select: none;
+    gap: 2px;
+
+    &-sep { color: rgba(255, 255, 255, 0.45); margin: 0 3px; }
+    [data-hero-total] { color: rgba(255, 255, 255, 0.5); }
+  }
+
+  &__progress {
+    width: 110px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: $radius-full;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    @include respond-down(tablet) { width: 64px; }
+  }
+
+  &__progress-bar {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border-radius: $radius-full;
+    transform-origin: left center;
+    transform: scaleX(0);
+
+    &.is-animating {
+      animation: hero-progress linear forwards;
+    }
+
+    &.is-paused {
+      animation-play-state: paused;
+    }
   }
 
   @include respond-down(md) {
@@ -143,6 +190,11 @@
     &__overlay { background:
       linear-gradient(180deg, rgba(30, 53, 79, 0.78) 0%, rgba(30, 53, 79, 0.5) 50%, rgba(30, 53, 79, 0.88) 100%); }
   }
+}
+
+@keyframes hero-progress {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
 }
 
 // =============================================================================
