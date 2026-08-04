@@ -11,6 +11,7 @@
   border-radius: $radius-xl;
   overflow: hidden;
   box-shadow: $shadow-sm;
+  margin: $spacing-8 0 $spacing-8;
 
   &__scroller {
     overflow-x: auto;

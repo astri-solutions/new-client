@@ -345,10 +345,6 @@
     transition: background-color $transition-base;
     text-decoration: none;
 
-    &:hover {
-      background-color: var(--color-secondary-600);
-    }
-
     span {
       font-size: $font-size-xs;
       font-weight: $font-weight-bold;
@@ -582,7 +578,7 @@
 // =============================================================================
 
 .site-footer-min {
-  background-color: var(--color-secondary-900);
+  background-color: #002b57;
   color: rgba(255,255,255,0.7);
 
   &__nav-wrap {
