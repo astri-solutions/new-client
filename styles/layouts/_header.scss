@@ -417,20 +417,21 @@
     }
 
     &:hover {
-      color: $color-gray-light-0;
-      background-color: $color-secondary-light-700;
+      color: var(--color-gray-0);
+      background-color: var(--color-secondary-700);
 
       @include respond-up(desktop) {
-        color: $color-gray-light-0;
-        background-color: $color-secondary-light-700;
+        color: var(--color-gray-0);
+        background-color: var(--color-secondary-700);
       }
     }
 
     &[aria-current='page'],
     &[aria-expanded='true'] {
-      color: $color-gray-light-0;
+      color: var(--color-gray-0);
+      background-color: var(--color-secondary-700);
 
-      @include respond-up(desktop) { color: $color-gray-light-0; }
+      @include respond-up(desktop) { color: var(--color-gray-0); background-color: var(--color-secondary-700); }
     }
   }
 
