@@ -32,7 +32,7 @@
   }
 
   &__logo {
-    height: 24px;
+    height: 32px;
     width: auto;
     display: block;
   }
@@ -417,12 +417,12 @@
     }
 
     &:hover {
-      color: var(--color-primary-300);
-      background-color: rgba(255, 255, 255, 0.06);
+      color: $color-gray-light-0;
+      background-color: $color-secondary-light-700;
 
       @include respond-up(desktop) {
-        color: var(--color-secondary-500);
-        background-color: transparent;
+        color: $color-gray-light-0;
+        background-color: $color-secondary-light-700;
       }
     }
 
