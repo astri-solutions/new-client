@@ -397,17 +397,17 @@ body.page-home main {
     transition: background-color $transition-base;
     text-decoration: none;
 
+    &:hover {
+      color: #fff;
+      background-color: var(--color-secondary-600);
+    }
+
     span {
       font-size: $font-size-xs;
       font-weight: $font-weight-bold;
       letter-spacing: $letter-spacing-wider;
       text-transform: uppercase;
       line-height: 1.5;
-    }
-
-    :hover {
-      color: #fff;
-      background-color: var(--color-secondary-600);
     }
   }
 
