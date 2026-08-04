@@ -404,6 +404,11 @@ body.page-home main {
       text-transform: uppercase;
       line-height: 1.5;
     }
+
+    :hover {
+      color: #fff;
+      background-color: var(--color-secondary-600);
+    }
   }
 
   &__icon {
