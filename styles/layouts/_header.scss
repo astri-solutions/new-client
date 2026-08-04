@@ -467,7 +467,6 @@
   display: block;
   max-height: 0;
   overflow: hidden;
-  padding: 0 0 0 $spacing-8;
   border-left: 2px solid transparent;
   margin-left: $spacing-6;
   transition:
@@ -534,7 +533,7 @@
     transition: color $transition-fast;
 
     @include respond-up(desktop) {
-      padding: $spacing-2 $spacing-3;
+      padding: 0;
       color: var(--color-text-muted);
     }
 
