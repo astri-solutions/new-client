@@ -78,8 +78,7 @@ body.page-home main {
     inset: 0;
     z-index: 1;
     background:
-      linear-gradient(110deg, rgba(30, 53, 79, 0.88) 0%, rgba(30, 53, 79, 0.55) 45%, rgba(30, 53, 79, 0.15) 100%),
-      linear-gradient(0deg, rgba(20, 20, 20, 0.4), transparent 60%);
+      linear-gradient(0deg, rgba(26, 26, 26, 0.5) 0%, rgba(26, 26, 26, 0.5) 100%);
   }
 
   &__content {
@@ -123,43 +122,42 @@ body.page-home main {
   }
 
   &__arrow {
-    width: 40px; height: 40px;
+    width: 34px; height: 34px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     border-radius: $radius-full;
-    background-color: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.45);
+    border: 2px solid #f7f7f7;
     color: #fff;
     backdrop-filter: blur(8px);
     transition: background-color $transition-fast, transform $transition-fast;
 
-    &:hover { background-color: rgba(255, 255, 255, 0.26); }
+    &:hover { transform: scale(1.05); }
     &:active { transform: scale(0.94); }
 
-    svg { width: 16px; height: 16px; }
+    svg { width: 34px; height: 34px; }
   }
 
   &__counter {
     display: flex;
     align-items: center;
-    font-family: var(--font-family-mono);
-    font-size: $font-size-sm;
-    font-weight: $font-weight-semibold;
+    font-family: var(--font-family-base);
+    font-size: $font-size-lg;
+    font-weight: $font-weight-regular;
     color: #fff;
     white-space: nowrap;
     user-select: none;
     gap: 2px;
 
-    &-sep { color: rgba(255, 255, 255, 0.45); margin: 0 3px; }
-    [data-hero-total] { color: rgba(255, 255, 255, 0.5); }
+    &-sep { color: #ffffff; margin: 0 4px; font-size: 10px; font-style: normal; }
+    [data-hero-total] { color: rgba(255, 255, 255); }
   }
 
   &__progress {
-    width: 110px;
-    height: 2px;
-    background-color: rgba(255, 255, 255, 0.3);
+    width: 146px;
+    height: 4px;
+    background-color: rgba(247, 247, 247, 0.5);
     border-radius: $radius-full;
     overflow: hidden;
     flex-shrink: 0;
@@ -170,7 +168,7 @@ body.page-home main {
   &__progress-bar {
     height: 100%;
     width: 100%;
-    background-color: #fff;
+    background-color: var(--color-secondary-700);
     border-radius: $radius-full;
     transform-origin: left center;
     transform: scaleX(0);
@@ -188,7 +186,7 @@ body.page-home main {
     height: 75vh;
     min-height: 480px;
     &__overlay { background:
-      linear-gradient(180deg, rgba(30, 53, 79, 0.78) 0%, rgba(30, 53, 79, 0.5) 50%, rgba(30, 53, 79, 0.88) 100%); }
+      linear-gradient(0deg, rgba(26, 26, 26, 0.5) 0%, rgba(26, 26, 26, 0.5) 100%); }
   }
 }
 
