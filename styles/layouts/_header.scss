@@ -250,11 +250,6 @@
     transition: color $transition-fast, background-color $transition-fast;
 
     svg { width: 18px; height: 18px; }
-
-    &:hover {
-      color: var(--color-secondary-500);
-      background-color: var(--color-tertiary-200);
-    }
   }
 }
 
