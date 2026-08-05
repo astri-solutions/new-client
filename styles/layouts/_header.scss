@@ -561,7 +561,7 @@
     flex-direction: column;
     gap: $spacing-4;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 28px); // espaçamento de 28px entre trigger e lista
     left: 0;
     min-width: 250px;
     padding: $spacing-6 $spacing-4;
@@ -583,6 +583,17 @@
       opacity $transition-base,
       transform $transition-base,
       visibility $transition-base;
+
+    // Ponte invisível que preenche o gap de 28px,
+    // mantendo a área de hover contínua entre trigger e lista
+    &::before {
+      content: '';
+      position: absolute;
+      top: -28px;
+      left: 0;
+      right: 0;
+      height: 28px;
+    }
   }
 
   &__link {
