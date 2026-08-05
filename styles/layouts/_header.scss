@@ -32,15 +32,27 @@
   }
 
   &__brand {
+    position: relative;
     display: inline-flex;
     align-items: center;
   }
 
-  &__logo {
+  &__logo,
+  &__logo-negative {
     height: 32px;
     width: auto;
     display: block;
-    transition: filter 350ms ease;
+    transition: opacity 350ms ease;
+  }
+
+  // Logo negativa: posicionada sobre a original, invisível por padrão
+  &__logo-negative {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+    pointer-events: none;
   }
 
   // ---- Hamburger (mobile only)
@@ -256,9 +268,9 @@
   -webkit-backdrop-filter: none;
   border-bottom-color: transparent;
 
-  .site-header__logo {
-    filter: brightness(0) invert(1);
-  }
+  // Troca de logo: esconde a original, mostra a negativa
+  .site-header__logo          { opacity: 0; pointer-events: none; }
+  .site-header__logo-negative { opacity: 1; pointer-events: auto; }
 
   .site-header__search {
     color: rgba(255, 255, 255, 0.85);
