@@ -274,15 +274,10 @@
 
   .site-header__search {
     color: rgba(255, 255, 255, 0.85);
-    &:hover {
-      color: #fff;
-      background-color: rgba(255, 255, 255, 0.14);
-    }
   }
 
   .site-header__hamburger {
     color: rgba(255, 255, 255, 0.9);
-    &:hover { background-color: rgba(255, 255, 255, 0.14); }
   }
 
   // Desktop: links brancos sobre o hero escuro
@@ -293,7 +288,7 @@
 
       &:hover {
         color: #fff;
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: var(--color-secondary-700);
       }
 
       &[aria-current='page'],
@@ -568,14 +563,17 @@
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 210px;
+    min-width: 250px;
     padding: $spacing-6 $spacing-4;
     margin: 0;
     border-left: none;
     max-height: none;
     overflow: visible;
     background: #fff;
-    border-radius: $radius-md;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     box-shadow: $shadow-lg;
     opacity: 0;
     visibility: hidden;
