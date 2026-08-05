@@ -98,11 +98,12 @@ body.page-home main {
 
   &__title {
     font-family: var(--font-family-display);
-    font-size: clamp(2.25rem, 5vw, $font-size-6xl);
-    font-weight: $font-weight-semibold;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-style: normal;
+    font-weight: $font-weight-light;
     line-height: $line-height-tight;
-    letter-spacing: $letter-spacing-tighter;
-    color: #fff;
+    letter-spacing: $letter-spacing-tight;
+    color: #fcfcfc;
     margin-bottom: 0;
   }
 
@@ -117,6 +118,7 @@ body.page-home main {
     justify-content: flex-start;
     gap: $spacing-3;
     pointer-events: none;
+    margin-bottom: $spacing-10;
 
     > * { pointer-events: auto; }
   }
@@ -313,7 +315,7 @@ body.page-home main {
     padding: $spacing-3 0;
     border-bottom: 1px solid var(--color-divider);
     cursor: pointer;
-    font-size: $font-size-sm;
+    font-size: $font-size-md;
     color: var(--color-text);
 
     input[type="checkbox"] {
@@ -350,13 +352,13 @@ body.page-home main {
     display: flex;
     align-items: center;
     gap: $spacing-1;
-    font-size: $font-size-xs;
+    font-size: $font-size-sm;
     color: var(--color-text-muted);
     svg { flex-shrink: 0; }
   }
 
   &__title {
-    font-size: $font-size-sm;
+    font-size: $font-size-md;
     font-weight: $font-weight-medium;
     color: var(--color-secondary-700);
     line-height: $line-height-snug;
@@ -508,7 +510,7 @@ body.page-home main {
   }
 
   &__title {
-    font-size: $font-size-sm;
+    font-size: $font-size-md;
     font-weight: $font-weight-medium;
     color: var(--color-secondary-700);
     line-height: $line-height-snug;
