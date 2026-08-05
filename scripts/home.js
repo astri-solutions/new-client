@@ -144,19 +144,10 @@ function initHeroSlider() {
   prevBtn?.addEventListener('click', () => { prev(); startAutoplay(); });
   nextBtn?.addEventListener('click', () => { next(); startAutoplay(); });
 
-  if (hero) {
-    hero.addEventListener('mouseenter', pause);
-    hero.addEventListener('mouseleave', resume);
-    hero.addEventListener('focusin',    pause);
-    hero.addEventListener('focusout',   (e) => {
-      if (!hero.contains(e.relatedTarget)) resume();
-    });
-  }
-
   // Pausa quando a aba sai do foco (economiza CPU)
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) stopAutoplay();
-    else if (!isPaused)  { startAutoplay(); restartProgress(); }
+    else { startAutoplay(); restartProgress(); }
   });
 
   // Inicializa
