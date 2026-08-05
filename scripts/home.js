@@ -73,8 +73,8 @@ function initHeroSlider() {
   function pauseProgress()  { progress?.classList.add('is-paused'); }
   function resumeProgress() { progress?.classList.remove('is-paused'); }
 
-  // ---- Transição de slides
-  function goTo(nextIndex, direction = 1) {
+  // ---- Transição de slides (fade-in + subida)
+  function goTo(nextIndex) {
     if (nextIndex === current) return;
 
     nextIndex = ((nextIndex % total) + total) % total;
@@ -82,26 +82,18 @@ function initHeroSlider() {
     const outgoing = slides[current];
     const incoming = slides[nextIndex];
 
-    // Limpa estados residuais de transição interrompida
+    // Garante estado limpo no incoming (caso venha de transição interrompida)
     incoming.style.transition = 'none';
     incoming.classList.remove('is-leaving');
-    void incoming.offsetWidth;
+    void incoming.offsetWidth; // reflow
     incoming.style.transition = '';
 
-    // Posiciona incoming fora da tela antes de animar
-    incoming.style.transform = `translateX(${direction > 0 ? '100%' : '-100%'})`;
-    incoming.style.opacity   = '0';
-    void incoming.offsetWidth;
-
+    // Dispara a transição via classes — o CSS cuida do fade + translateY
     outgoing.classList.remove('is-active');
     outgoing.classList.add('is-leaving');
-    outgoing.style.transform = `translateX(${direction > 0 ? '-100%' : '100%'})`;
-
     incoming.classList.add('is-active');
-    incoming.style.transform = 'translateX(0)';
-    incoming.style.opacity   = '1';
 
-    // Limpeza após a transição do slide saindo
+    // Limpeza: remove is-leaving sem acionar nova transição (evita translateY fantasma)
     let cleanupDone = false;
     const doCleanup = () => {
       if (cleanupDone) return;
@@ -109,22 +101,20 @@ function initHeroSlider() {
       outgoing.style.transition = 'none';
       void outgoing.offsetWidth;
       outgoing.classList.remove('is-leaving');
-      outgoing.style.transform = '';
-      outgoing.style.opacity   = '';
       requestAnimationFrame(() => { outgoing.style.transition = ''; });
       outgoing.removeEventListener('transitionend', onTransitionEnd);
     };
-    const onTransitionEnd = (e) => { if (e.propertyName === 'transform') doCleanup(); };
+    const onTransitionEnd = (e) => { if (e.propertyName === 'opacity') doCleanup(); };
     outgoing.addEventListener('transitionend', onTransitionEnd);
-    setTimeout(doCleanup, 950); // fallback
+    setTimeout(doCleanup, 900); // fallback
 
     current = nextIndex;
     updateCounter();
     if (!isPaused) restartProgress();
   }
 
-  function next() { goTo(current + 1,  1); }
-  function prev() { goTo(current - 1, -1); }
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
 
   // ---- Autoplay
   function startAutoplay() {
@@ -154,19 +144,10 @@ function initHeroSlider() {
   prevBtn?.addEventListener('click', () => { prev(); startAutoplay(); });
   nextBtn?.addEventListener('click', () => { next(); startAutoplay(); });
 
-  if (hero) {
-    hero.addEventListener('mouseenter', pause);
-    hero.addEventListener('mouseleave', resume);
-    hero.addEventListener('focusin',    pause);
-    hero.addEventListener('focusout',   (e) => {
-      if (!hero.contains(e.relatedTarget)) resume();
-    });
-  }
-
   // Pausa quando a aba sai do foco (economiza CPU)
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) stopAutoplay();
-    else if (!isPaused)  { startAutoplay(); restartProgress(); }
+    else { startAutoplay(); restartProgress(); }
   });
 
   // Inicializa
